@@ -3,10 +3,10 @@
 A theme for those who want a custom header, background, avatar and favicon. I was going for a bootstrap-ey kind of feel. I created this for myself but though it might have a broader appeal.
 Header: Best at 982px wide.
 Background: Best at 1080px tall. The theme is set to tile horizontally, fixed.
-Avatar: Best at under 210px X 210px.
+Avatar: Best at 210px X 210px - it stretches or compresses to that size.
 favicon: 16X16
 Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com and "Redux Edit", from themes.edada.ms-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="en" lang="en">
 <head>
     <!-- DEFAULT VARIABLES -->
     
@@ -47,7 +47,9 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <style type="text/css">
         /* Standard Redux stuff */
-        body {
+        body 
+		
+		{
             background: {color:Background} url('{image:Background}') top left fixed repeat;
             margin: 0;
             padding: 0;
@@ -810,9 +812,31 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                             color: #fff;
                             margin-left: 15px;
                         }
-        
+                    #likes img{
+            width: 170px!important;
+            float: left;
+            }
         /* Extra stuff */
-        #contents .post { margin: 0px; }
+        <!-- START For Facebook Open Graph -->
+{block:PostSummary}
+<meta property="og:title" content="{PostSummary} - {Name}" />
+{/block:PostSummary}
+<meta property="og:url" content="{Permalink}" />
+<meta property="og:type" content="article" />
+{block:Posts}
+{block:Photo}<meta property="og:image" content="{PhotoURL-250}" />    {/block:Photo}
+{block:Text}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Text}
+{block:Photoset}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Photoset}
+{block:Quote}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Quote}
+{block:Link}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Link}
+{block:Chat}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Chat}
+{block:Audio}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Audio}
+{block:Video}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Video}
+{block:Answer}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Answer}
+{/block:Posts}
+<meta property="og:description" content="{MetaDescription}" />
+<!-- For Facebook Open Graph END -->
+#contents .post { margin: 0px; }
 		.post .copy, .post .body, .post a { color: {color:Post Body} !important; }
         .post { font-family: {font:Post Body} !important; }
         .post .title, .post .quote, .quotebg, .post .link a { color: {color:Post Title} !important; font-family: {font:Post Titles} !important; }
@@ -847,14 +871,17 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
 	</style>
     <!--[if lt IE 7.]>
         <style type="text/css">
-            #wrapper #sidebar #bottom {
+            
+
+
+#wrapper #sidebar #bottom {
                 background: transparent;
             }
             
             #wrapper #sidebar #top #avatar {
                 background: none;
             }
-            
+
             #wrapper #sidebar #top #avatar img {
                 border: 5px solid #f1f1f1;
             }
@@ -880,6 +907,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                 display: none;
                 float: none;
             }
+			
         </style>
     <![endif]-->
     
@@ -1086,8 +1114,11 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                             </div>
                         {/block:Permalink}
                     {/block:IfDisqusShortname}
-                    
-                </div>
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Teratoma">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
+                
+				
+</div>
                 <div class="bottom"></div>
             {/block:Posts}
             
@@ -1164,14 +1195,8 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                 {/block:Twitter}
                     {block:IfLikesInSidebar}
     {block:Likes}
-    <div class="item">
-        <h2>{lang:Likes}</h2>
-        {Likes limit="5" summarize="18" width="150"}
-        <a href="http://www.tumblr.com/liked/by/{Name}">
-        {lang:More liked posts}
-        </a>
-    </div>
-    {/block:Likes}
+<div id="likes" align="center"><h1>LIKES</h1>{Likes width="170" limit="5" summarize="100"}<br><a href="http://www.tumblr.com/liked/by/{Name}">see more </div>
+{/block:Likes}
     {/block:IfLikesInSidebar}
                 {block:IfShowPeopleIFollow}
                     {block:Following}
