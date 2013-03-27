@@ -1192,7 +1192,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                 {/block:Twitter}
                     {block:IfLikesInSidebar}
     {block:Likes}
-<div id="likes" align="center"><h1>LIKES</h1>{Likes width="170" limit="5" summarize="100"}<br><a href="http://www.tumblr.com/liked/by/{Name}">see more </div>
+<div id="likes" align="center"><h1>LIKES</h1>{Likes width="170" limit="5" summarize="15"}<br><a href="http://www.tumblr.com/liked/by/{Name}">see more </div>
 {/block:Likes}
     {/block:IfLikesInSidebar}
                 {block:IfShowPeopleIFollow}
