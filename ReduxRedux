@@ -61,11 +61,8 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
             height: 0px;
             overflow: hidden;
         }
-        like_photo {
-		max-width: "100%";
-		}
-        a img {
-            
+                a img {
+        max-width: "100%";    
 			border: none;
         -moz-border-radius: 10px;
                         -webkit-border-radius: 10px;
@@ -1147,7 +1144,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
         
         <div id="sidebar">
             <div id="top">
-                <div id="avatar"><a href="/"><img src="{image:Avatar}" max-width="100%" /></a></div>
+                <div id="avatar"><a href="/"><img src="{image:Avatar}" width="100%" /></a></div>
                 <div id="description">{Description}</div>
                 
                 <div id="pages" class="ask_and_submit">
