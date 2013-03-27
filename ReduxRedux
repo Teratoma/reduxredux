@@ -3,7 +3,7 @@
 A theme for those who want a custom header, background, avatar and favicon. I was going for a bootstrap-ey kind of feel. I created this for myself but though it might have a broader appeal.
 Header: Best at 982px wide.
 Background: Best at 1080px tall. The theme is set to tile horizontally, fixed.
-Avatar: Best at 210px X 210px - it stretches or compresses to that size.
+Avatar: Best at under 210px X 210px.
 favicon: 16X16
 Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com and "Redux Edit", from themes.edada.ms-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -13,6 +13,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
     <meta name="if:Show People I Follow" content="1" />
     <meta name="if:Show Tags" content="1" />
     <meta name="if:Show Album Art on Audio Posts" content="1" />
+    <meta name="if:Likes in sidebar" content="1"/>
     <meta name="if:Enable Jump Pagination" content="0" />
     <meta name="if:Sidebar On Left" content="0" />
     <meta name="text:Disqus Shortname" content="" />
@@ -58,9 +59,12 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
             height: 0px;
             overflow: hidden;
         }
-        
+        like_photo {
+		max-width: "100%";
+		}
         a img {
-            border: none;
+            
+			border: none;
         -moz-border-radius: 10px;
                         -webkit-border-radius: 10px;
                         border-radius: 10px;
@@ -276,7 +280,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                     }
                                         
                     #wrapper #content .post .chat {
-                        background-color: #fff;
+                        
                         border-left: 5px solid #dedddd;
                         margin: 10px 10px 0 10px;
                         font-size: 14px;
@@ -287,14 +291,14 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                         }
                         
                             #wrapper #content .post .chat .lines .line {
-                                background-color: #eaeaea;
-                                color: #494949;
+                                background-color: rgba(255,255,255,0.2);
+                                color: #cccccc;
                                 margin-bottom: 1px;
                                 padding: 3px 5px;
                             }
                             
                             #wrapper #content .post .chat .lines .line.even {
-                                background-color: #dedddd;
+                                background-color: rgba(255,255,255,0.1);
                             }
                         
                         #wrapper #content .post .link {
@@ -431,8 +435,8 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                         }
                         
                             #wrapper #content #navigation a {
-                                background-color: #fff;
-                                color: {color:Background};
+                                background-color: rgba(0,0,0,0.2);
+                                color: #CCC;
                                 padding: 5px 10px;
                                 text-decoration: none;
                                 margin-left: 25px;
@@ -725,7 +729,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                     #wrapper #sidebar #top .content {
                         margin-top: 2px;
                         padding: 7px 10px;
-                        background: #eaeaea;
+                        
                         color: #666;
                         font-size: 11px;
                         overflow: hidden;
@@ -838,7 +842,9 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
         .post .chat { border-left: 0 solid transparent !important; }
         .post .chat .lines .line { margin-bottom: 0 !important; }
         .post .audio { background-color: transparent !important; }
-    </style>
+    #tumblr-likes .like_post img {
+	max-width: 100%;
+	</style>
     <!--[if lt IE 7.]>
         <style type="text/css">
             #wrapper #sidebar #bottom {
@@ -922,7 +928,23 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                 {/block:NoSearchResults}
             {/block:SearchPage}
             
-            {block:Posts}
+			{block:IfStickyTag}
+					{block:IndexPage}
+					features['view.tumblr.sticky'] = {
+						{block:SearchPage}
+						disabled: 								true,
+						{/block:SearchPage}
+						{block:TagPage}
+						disabled: 								true,
+						{/block:TagPage}
+						labelText:								"{text:Sticky Label}",
+						el:										"#tumblr-posts .posts",
+						tag: 									"{text:Sticky Tag}"
+					};
+					{/block:IndexPage}
+					{/block:IfStickyTag}
+            
+			{block:Posts}
                 <div class="post">
                     
                     {block:Photo}
@@ -1094,7 +1116,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
         
         <div id="sidebar">
             <div id="top">
-                <div id="avatar"><a href="/"><img src="{image:Avatar}" width="100%" /></a></div>
+                <div id="avatar"><a href="/"><img src="{image:Avatar}" max-width="100%" /></a></div>
                 <div id="description">{Description}</div>
                 
                 <div id="pages" class="ask_and_submit">
@@ -1140,7 +1162,17 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                     </script>
                 </div>
                 {/block:Twitter}
-                
+                    {block:IfLikesInSidebar}
+    {block:Likes}
+    <div class="item">
+        <h2>{lang:Likes}</h2>
+        {Likes limit="5" summarize="18" width="150"}
+        <a href="http://www.tumblr.com/liked/by/{Name}">
+        {lang:More liked posts}
+        </a>
+    </div>
+    {/block:Likes}
+    {/block:IfLikesInSidebar}
                 {block:IfShowPeopleIFollow}
                     {block:Following}
                         <div class="heading" id="following">{lang:Following}</div>
