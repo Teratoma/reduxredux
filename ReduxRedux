@@ -809,10 +809,38 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                             color: #fff;
                             margin-left: 15px;
                         }
-                    #likes img{
-            width: 170px!important;
-            float: left;
-            }
+
+#title img{
+max-width: 982px !important;
+}
+						#likes {
+list-style-type: none;
+margin:10px;
+padding: 0 0 0 0;float: left;
+ text-align: left;
+}
+
+li.like_post {
+width: 210px;
+margin: 2px;
+float: left;
+padding: 2px;
+}
+#likes img{
+width: 170px!important;
+float: left;
+}
+#likes h1{
+font-family: {text:title font};
+font-style:italic;
+font-size:12px;
+letter-spacing: 5px;
+line-height: 10px;
+text-transform:lowercase;
+text-align: left;
+border-bottom:2px solid {color:topbar};
+padding-left:5px;margin:5px;
+}
         /* Extra stuff */
         
 #contents .post { margin: 0px; }
@@ -820,7 +848,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
         .post { font-family: {font:Post Body} !important; }
         .post .title, .post .quote, .quotebg, .post .link a { color: {color:Post Title} !important; font-family: {font:Post Titles} !important; }
         .post .link a { background-color: transparent !important; }
-        #title a { color: {color:Title} !important; font-family: {font:Title} !important; }
+        #title a { color: {color:Title} !important; font-family: {font:Title} !important; } 
         #sidebar, #search, #search .query { color: {color:Sidebar Body} !important; border-color: {color:Sidebar Body} !important; font-family:{font:Sidebar} !important; }
         .footer, .notecontainer { font-family: {font:Post Footer} !important; }
         .heading, #search .submit, a.page { background-color: {color:Sidebar Body} !important; }
@@ -941,7 +969,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                     
                     {Block:Photo}
     {LinkOpenTag}
-        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+        <center><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></center>
     {LinkCloseTag}
 
     {block:HighRes}
