@@ -6,7 +6,7 @@ Background: Best at 1080px tall. The theme is set to tile horizontally, fixed.
 Avatar: Best at 210px X 210px - it stretches or compresses to that size.
 favicon: 16X16
 Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com and "Redux Edit", from themes.edada.ms-->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <!-- DEFAULT VARIABLES -->
     
@@ -62,7 +62,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
             overflow: hidden;
         }
                 a img {
-        max-width: "100%";    
+        max-width: 700px;    
 			border: none;
         -moz-border-radius: 10px;
                         -webkit-border-radius: 10px;
@@ -193,7 +193,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                         }
                         
                         #wrapper #content .post .copy img {
-                            max-width: 100%;
+                            max-width: 712px;
                         }
                     
                     #wrapper #content .post .audio {
@@ -275,7 +275,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                     }
                     
                     #wrapper #content .post img {
-                      max-width: 100%;
+                      max-width: 712px%;
                     }
                                         
                     #wrapper #content .post .chat {
@@ -814,25 +814,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
             float: left;
             }
         /* Extra stuff */
-        <!-- START For Facebook Open Graph -->
-{block:PostSummary}
-<meta property="og:title" content="{PostSummary} - {Name}" />
-{/block:PostSummary}
-<meta property="og:url" content="{Permalink}" />
-<meta property="og:type" content="article" />
-{block:Posts}
-{block:Photo}<meta property="og:image" content="{PhotoURL-250}" />    {/block:Photo}
-{block:Text}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Text}
-{block:Photoset}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Photoset}
-{block:Quote}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Quote}
-{block:Link}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Link}
-{block:Chat}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Chat}
-{block:Audio}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Audio}
-{block:Video}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Video}
-{block:Answer}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Answer}
-{/block:Posts}
-<meta property="og:description" content="{MetaDescription}" />
-<!-- For Facebook Open Graph END -->
+        
 #contents .post { margin: 0px; }
 		.post .copy, .post .body, .post a { color: {color:Post Body} !important; }
         .post { font-family: {font:Post Body} !important; }
@@ -953,30 +935,31 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                 {/block:NoSearchResults}
             {/block:SearchPage}
             
-			{block:IfStickyTag}
-					{block:IndexPage}
-					features['view.tumblr.sticky'] = {
-						{block:SearchPage}
-						disabled: 								true,
-						{/block:SearchPage}
-						{block:TagPage}
-						disabled: 								true,
-						{/block:TagPage}
-						labelText:								"{text:Sticky Label}",
-						el:										"#tumblr-posts .posts",
-						tag: 									"{text:Sticky Tag}"
-					};
-					{/block:IndexPage}
-					{/block:IfStickyTag}
-            
+			          
 			{block:Posts}
                 <div class="post">
                     
-                    {block:Photo}
-                        <div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</div>
-                        {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
-                    {/block:Photo}
-                    
+                    {Block:Photo}
+    {LinkOpenTag}
+        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+    {LinkCloseTag}
+
+    {block:HighRes}
+         <a href="{PhotoURL-HighRes}"><p>View in High-Res</a>
+    {/block:HighRes}
+
+   {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
+
+    
+{/block:Caption}
+{/Block:Photo}
+
+{block:Photoset}
+{Photoset-700}
+{block:Caption}
+        {Caption}
+    {/block:Caption}
+{/block:Photoset}                   
                     {block:Video}
                         <div class="media">{Video-500}</div>
                         {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
