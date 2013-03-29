@@ -9,7 +9,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <!-- DEFAULT VARIABLES -->
-    
+    <meta name="text:Custom HTML" content="Replace this with your own text or HTML" />
     <meta name="if:Show People I Follow" content="1" />
     <meta name="if:Show Tags" content="1" />
     <meta name="if:Show Album Art on Audio Posts" content="1" />
@@ -817,6 +817,18 @@ color: {color:Background};
 max-width: 982px !important;
 }
 
+#customhtml {
+                  
+                    background: rgba(0,0,0,.4);
+                    color: {color:Post Body};
+                    margin: 0 0 10px 0;
+					padding: 10px;
+                    position: relative;
+					-moz-border-radius: 10px;
+                        -webkit-border-radius: 10px;
+                        border-radius: 10px;
+                }
+
 ul#likes {
                 list-style-type: none;
                 margin: 0 0 0 0;
@@ -971,7 +983,19 @@ ul#likes {
         </div>
         
         <div id="content">
-            
+           
+		   {block:IndexPage}
+  <div id="index"
+    {block:SearchPage}style="display: none;"{/block:SearchPage}
+    {block:TagPage}style="display: none;"{/block:TagPage}>
+    {block:IfCustomHTML}
+            <div id="customhtml">
+               {text:Custom Html}    
+            </div>
+        {/block:IfCustomHTML}
+  </div>
+{/block:IndexPage}
+		
             {block:SearchPage}
                 {block:SearchResults}
                     <div id="searchresults">{lang:SearchResultCount results for SearchQuery 2}</div>
