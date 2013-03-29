@@ -5,7 +5,7 @@ Header: Best at 982px wide.
 Background: Best at 1080px tall. The theme is set to tile horizontally, fixed.
 Avatar: Best at 210px X 210px - it stretches or compresses to that size.
 favicon: 16X16
-Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com and "Redux Edit", from themes.edada.ms-->
+Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from themes.edada.ms-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <!-- DEFAULT VARIABLES -->
@@ -546,6 +546,9 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                 #wrapper #sidebar a {
                     color: {color:Background};
                 }
+				a:link {
+color: {color:Background};
+}
                 
                 #wrapper #sidebar #top {
                     background: rgba(0,0,0,.4);
@@ -722,7 +725,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                     }
                     
                     #wrapper #sidebar #top .heading#following {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-following.png') right center no-repeat {color:Background};
+                        background: url('http://assets.tumblr.com/themes/redux/sidebar-following.png') right center no-repeat;
                     }
                     
                     #wrapper #sidebar #top .content {
@@ -736,7 +739,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
                     
                         #wrapper #sidebar #top a {
                             text-decoration: none;
-                        }
+                        color: #CCC;}
                     
                         #wrapper #sidebar #top #following-avatars.content {
                             padding: 4px;
@@ -813,34 +816,51 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com a
 #title img{
 max-width: 982px !important;
 }
-						#likes {
-list-style-type: none;
-margin:10px;
-padding: 0 0 0 0;float: left;
- text-align: left;
-}
 
-li.like_post {
-width: 210px;
-margin: 2px;
-float: left;
-padding: 2px;
-}
-#likes img{
-width: 170px!important;
-float: left;
-}
-#likes h1{
-font-family: {text:title font};
-font-style:italic;
-font-size:12px;
-letter-spacing: 5px;
-line-height: 10px;
-text-transform:lowercase;
-text-align: left;
-border-bottom:2px solid {color:topbar};
-padding-left:5px;margin:5px;
-}
+ul#likes {
+                list-style-type: none;
+                margin: 0 0 0 0;
+                padding: 0 0 0 0;
+            }
+
+                li.like_post {
+                    /* Should match the width specified in the Likes tag */
+                    width: 210px;
+                    margin: 0 0 20px 0;
+                    float: left;
+                }
+
+                  li.like_post img {
+                      max-width: 100%;
+                  }
+
+                  li.like_post blockquote {
+                      margin: 0;
+                      padding: 0 0 0 10px;
+                      border-left: 1px solid #eee;
+                  }
+
+                  li.like_post ol,
+                  li.like_post ul {
+                      
+                      padding: 0;
+                  }
+
+                  li.like_post .like_link a {
+                      color: {background};
+					  font-weight: bold;
+					  
+                  }
+
+                  li.like_post .like_title {
+                      color: {Post Title};
+					  font-weight: bold;
+                  }
+
+                  li.like_post .post_info_bottom {
+                     margin: 0 0 20px 0;
+                      display: block !important;
+                  }
         /* Extra stuff */
         
 #contents .post { margin: 0px; }
@@ -873,8 +893,7 @@ padding-left:5px;margin:5px;
         .post .chat { border-left: 0 solid transparent !important; }
         .post .chat .lines .line { margin-bottom: 0 !important; }
         .post .audio { background-color: transparent !important; }
-    #tumblr-likes .like_post img {
-	max-width: 100%;
+    
 	</style>
     <!--[if lt IE 7.]>
         <style type="text/css">
@@ -972,11 +991,7 @@ padding-left:5px;margin:5px;
         <center><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></center>
     {LinkCloseTag}
 
-    {block:HighRes}
-         <a href="{PhotoURL-HighRes}"><p>View in High-Res</a>
-    {/block:HighRes}
-
-   {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
+    {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
 
     
 {/block:Caption}
@@ -1203,8 +1218,16 @@ padding-left:5px;margin:5px;
                 {/block:Twitter}
                     {block:IfLikesInSidebar}
     {block:Likes}
-<div id="likes" align="center"><h1>LIKES</h1>{Likes width="170" limit="5" summarize="15"}<br><a href="http://www.tumblr.com/liked/by/{Name}">see more </div>
-{/block:Likes}
+            <div id="likes_container">
+                <h2>Likes</h2>
+
+                {Likes limit="5" summarize="1" width="210"}
+
+                <a href="http://www.tumblr.com/liked/by/{Name}">
+                    See more...
+                </a>
+            </div>
+        {/block:Likes}
     {/block:IfLikesInSidebar}
                 {block:IfShowPeopleIFollow}
                     {block:Following}
