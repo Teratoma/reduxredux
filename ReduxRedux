@@ -818,7 +818,7 @@ max-width: 982px !important;
 }
 
 #customhtml {
-                  
+                    font-family: {font:Post Body} !important;
                     background: rgba(0,0,0,.4);
                     color: {color:Post Body};
                     margin: 0 0 10px 0;
