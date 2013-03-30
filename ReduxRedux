@@ -1,10 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--Redux Redux by Teratoma.tk
-A theme for those who want a custom header, background, avatar and favicon. I was going for a bootstrap-ey kind of feel. I created this for myself but though it might have a broader appeal.
-Header: Best at 982px wide.
-Background: Best at 1080px tall. The theme is set to tile horizontally, fixed.
-Avatar: Best at 210px X 210px - it stretches or compresses to that size.
-favicon: 16X16
 Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from themes.edada.ms-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -24,10 +19,10 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
 	<meta name="image:Header" content="http://static.tumblr.com/su4usjb/qGOmkhhhi/reduxredux-header.png" />
     <meta name="image:Background" content="http://static.tumblr.com/su4usjb/rPLmk8dg2/reduxredux-bg.png" />
     <meta name="color:Title" content="#FFFFFF" />
-    <meta name="color:Post Title" content="#589fb4" />
-    <meta name="color:Post Body" content="#c5c5c5" />
+    <meta name="color:Post Title" content="#66ccff" />
+    <meta name="color:Post Body" content="#CCCCCC" />
     
-    <meta name="color:Sidebar Body" content="#589fb4" />
+    <meta name="color:Sidebar Body" content="#66ccff" />
 
 	<meta name="if:Hide Date And Notes" content="0" />
     <meta name="if:Hide Tags And Source" content="0" />
@@ -551,7 +546,17 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
 				a:link {
 color: {color:Background};
 }
-                
+#linkbutton{
+                            display: block;
+                            float: left;
+                            background-color: {color:Background};
+                            color: #fff;
+                            padding: 4px 5px;
+                            margin: 0 5px 5px 0;
+                            -webkit-border-radius: 3px;
+                            -moz-border-radius: 3px;
+                            border-radius: 3px;
+                        }                
                 #wrapper #sidebar #top {
                     background: rgba(0,0,0,.4);
                     padding: 0 20px;
@@ -820,6 +825,7 @@ max-width: 982px !important;
 }
 
 #customhtml {
+                    display:none;
                     font-family: {font:Post Body} !important;
                     background: rgba(0,0,0,.4);
                     color: {color:Post Body};
@@ -830,7 +836,9 @@ max-width: 982px !important;
                         -webkit-border-radius: {text:Corner Radius}px;
                         border-radius: {text:Corner Radius}px;
                 }
-
+.page1 #customhtml{
+  display:block;
+}
 ul#likes {
                 list-style-type: none;
                 margin: 0 0 0 0;
@@ -990,10 +998,12 @@ ul#likes {
   <div id="index"
     {block:SearchPage}style="display: none;"{/block:SearchPage}
     {block:TagPage}style="display: none;"{/block:TagPage}>
-    {block:IfCustomHTML}
-            <div id="customhtml">
+    
+	{block:IfCustomHTML}
+            <body class="page{CurrentPage}">
+  <div id="customhtml">
                {text:Custom Html}    
-            </div>
+            </div></body>
         {/block:IfCustomHTML}
   </div>
 {/block:IndexPage}
