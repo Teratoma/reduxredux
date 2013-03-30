@@ -75,7 +75,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
             width: 982px;
             margin: 0 auto;
 		    padding: 10px;
-			background: rgba(0,0,0,.5)
+			background: rgba(0,0,0,.6)
 		
 		}
         
@@ -85,7 +85,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                 font-size: 50px;
                 font-weight: bold;
                 font-family: {font:Title};
-                text-shadow: 1px 3px 5px rgba(0,0,0, 0.5);
+                text-shadow: 2px 3px 5px rgba(0,0,0, 0.5);
                 letter-spacing: -1px;
             }
             
