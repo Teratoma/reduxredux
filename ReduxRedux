@@ -9,10 +9,11 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <!-- DEFAULT VARIABLES -->
-    <meta name="text:Corner Radius in px)" content="5" />
+    <meta name="text:Corner Radius" content="5" />
 	<meta name="text:Custom HTML" content="Replace this with your own text or HTML" />
     <meta name="if:Show People I Follow" content="1" />
     <meta name="if:Show Tags" content="1" />
+	<meta name="if:Show Tweet This" content="1" />
     <meta name="if:Show Album Art on Audio Posts" content="1" />
     <meta name="if:Likes in sidebar" content="1"/>
     <meta name="if:Enable Jump Pagination" content="0" />
@@ -1162,9 +1163,10 @@ ul#likes {
                             </div>
                         {/block:Permalink}
                     {/block:IfDisqusShortname}
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Teratoma">Tweet</a>
+                  {block:ifShowTweetThis}
+				  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Teratoma">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
-                
+{/block:ifShowTweetThis}                
 				
 </div>
                 <div class="bottom"></div>
