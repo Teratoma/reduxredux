@@ -9,7 +9,8 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <!-- DEFAULT VARIABLES -->
-    <meta name="text:Custom HTML" content="Replace this with your own text or HTML" />
+    <meta name="text:Corner Radius in px)" content="5" />
+	<meta name="text:Custom HTML" content="Replace this with your own text or HTML" />
     <meta name="if:Show People I Follow" content="1" />
     <meta name="if:Show Tags" content="1" />
     <meta name="if:Show Album Art on Audio Posts" content="1" />
@@ -64,9 +65,9 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                 a img {
         max-width: 700px;    
 			border: none;
-        -moz-border-radius: 10px;
-                        -webkit-border-radius: 10px;
-                        border-radius: 10px;
+        -moz-border-radius: {text:Corner Radius}px;
+                        -webkit-border-radius: {text:Corner Radius}px;
+                        border-radius: {text:Corner Radius}px;
     					}
         
         #wrapper {
@@ -104,9 +105,9 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                     margin: 1px;
 					padding: 10px;
                     position: relative;
-					-moz-border-radius: 10px;
-                        -webkit-border-radius: 10px;
-                        border-radius: 10px;
+					-moz-border-radius: {text:Corner Radius}px;
+                        -webkit-border-radius: {text:Corner Radius}px;
+                        border-radius: {text:Corner Radius}px;
                 }
                     
                     #wrapper #content .post .media {
@@ -554,12 +555,12 @@ color: {color:Background};
                     background: rgba(0,0,0,.4);
                     padding: 0 20px;
                     
-                    -webkit-border-top-left-radius: 10px;
-                    -webkit-border-top-right-radius: 10px;
+                    -webkit-border-top-left-radius: {text:Corner Radius}px;
+                    -webkit-border-top-right-radius: {text:Corner Radius}px;
                     -moz-border-radius-topleft: 10px;
                     -moz-border-radius-topright: 10px;
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
+                    border-top-left-radius: {text:Corner Radius}px;
+                    border-top-right-radius: {text:Corner Radius}px;
                 }
                 
                     #wrapper #sidebar #top #avatar {
@@ -793,12 +794,12 @@ color: {color:Background};
                         background: rgba(0,0,0,.4);
                         width: 250px;
                         height: 25px;
-                        -webkit-border-bottom-left-radius: 10px;
-                        -webkit-border-bottom-right-radius: 10px;
+                        -webkit-border-bottom-left-radius: {text:Corner Radius}px;
+                        -webkit-border-bottom-right-radius: {text:Corner Radius}px;
                         -moz-border-radius-bottomleft: 10px;
                         -moz-border-radius-bottomright: 10px;
-                        border-bottom-left-radius: 10px;
-                        border-bottom-right-radius: 10px;
+                        border-bottom-left-radius: {text:Corner Radius}px;
+                        border-bottom-right-radius: {text:Corner Radius}px;
 						}
                     
                     #wrapper #sidebar #copyright {
@@ -824,9 +825,9 @@ max-width: 982px !important;
                     margin: 0 0 10px 0;
 					padding: 10px;
                     position: relative;
-					-moz-border-radius: 10px;
-                        -webkit-border-radius: 10px;
-                        border-radius: 10px;
+					-moz-border-radius: {text:Corner Radius}px;
+                        -webkit-border-radius: {text:Corner Radius}px;
+                        border-radius: {text:Corner Radius}px;
                 }
 
 ul#likes {
@@ -900,7 +901,7 @@ ul#likes {
         {block:IfHideDateAndNotes}.date_notes { display: none !important; }{/block:IfHideDateAndNotes}
         {block:IfHideTagsAndSource}.tags_source { display: none !important; }{/block:IfHideTagsAndSource}
         {block:IfBackgroundImageCover}body { background-size: cover; }{/block:IfBackgroundImageCover}
-        {block:IfRoundPostCorners}.post { border-radius: 10px; }{/block:IfRoundPostCorners}
+        {block:IfRoundPostCorners}.post { border-radius: {text:Corner Radius}px; }{/block:IfRoundPostCorners}
         .post .chat .lines { margin-left: 0 !important; }
         .post .chat { border-left: 0 solid transparent !important; }
         .post .chat .lines .line { margin-bottom: 0 !important; }
