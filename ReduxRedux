@@ -61,8 +61,9 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
             overflow: hidden;
         }
                 a img {
-        max-width: 700px;    
-			border: none;
+        max-width: 100%;    
+		max-height: auto !important;
+		border: none;
         -moz-border-radius: {text:Corner Radius}px;
                         -webkit-border-radius: {text:Corner Radius}px;
                         border-radius: {text:Corner Radius}px;
@@ -981,7 +982,10 @@ ul#likes {
                 padding: 0;
                 margin: 0;
             }
-        </style>
+#tumblr_lightbox {
+       max-width: 982px !important;
+	   max-height: auto !important;}
+	   </style>
     <![endif]-->
     <style type="text/css">{CustomCSS}</style>
 </head>
@@ -1175,7 +1179,7 @@ ul#likes {
                             </div>
                         {/block:Permalink}
                     {/block:IfDisqusShortname}
-                  <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"></div><a href="{ReblogURL}"><img alt="Reblog This!" src="http://static.tumblr.com/su4usjb/bMYmkhot7/reduxredux-reblog.png"></a><a href="{SourceURL}"><img alt="This entry's link" src="http://static.tumblr.com/su4usjb/FCwmkhrre/reduxredux-link.png"></a>
+                  <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"></div><a href="{ReblogURL}"><img alt="Reblog This!" src="http://static.tumblr.com/su4usjb/bMYmkhot7/reduxredux-reblog.png"></a><a href="{Permalink}"><img alt="This entry's link" src="http://static.tumblr.com/su4usjb/FCwmkhrre/reduxredux-link.png"></a>
 				  {block:ifShowTweetThis}
 				  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Teratoma">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
