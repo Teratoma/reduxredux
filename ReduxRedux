@@ -1220,15 +1220,15 @@ ul#likes {
                 <div id="pages" class="ask_and_submit">
                     {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
                     {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-                    <div class="clear"></div>
-                </div>
-                
-                {block:HasPages}
+                    <div class="clear"></div>{block:HasPages}
                     <div id="pages">
                         {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
                         <div class="clear"></div>
                     </div>
                 {/block:HasPages}
+                </div>
+                
+                
                 
                 <div id="search">
                     <form action="/search" method="get" id="search-form">
