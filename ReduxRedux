@@ -1228,7 +1228,18 @@ ul#likes {
                 {/block:HasPages}
                 </div>
                 
-                
+                <div id="buttons">
+                    <div class="row">
+                        <div class="button" id="button-rss"><a href="{RSS}">{lang:RSS feed}</a></div>
+                        <div class="button" id="button-random"><a href="/random">{lang:Random}</a></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="row">
+                        <div class="button" id="button-archive"><a href="/archive">{lang:Archive}</a></div>
+                        <div class="button" id="button-mobile"><a href="/mobile">{lang:Mobile}</a></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
                 
                 <div id="search">
                     <form action="/search" method="get" id="search-form">
@@ -1282,18 +1293,7 @@ ul#likes {
                     {/block:Following}
                 {/block:IfShowPeopleIFollow}
                 
-                <div id="buttons">
-                    <div class="row">
-                        <div class="button" id="button-rss"><a href="{RSS}">{lang:RSS feed}</a></div>
-                        <div class="button" id="button-random"><a href="/random">{lang:Random}</a></div>
-                    </div>
-                    <div class="clear"></div>
-                    <div class="row">
-                        <div class="button" id="button-archive"><a href="/archive">{lang:Archive}</a></div>
-                        <div class="button" id="button-mobile"><a href="/mobile">{lang:Mobile}</a></div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
+                
                 
             </div>
             
