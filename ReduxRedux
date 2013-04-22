@@ -19,12 +19,17 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
     <meta name="image:Avatar" content="http://static.tumblr.com/su4usjb/nxXmkhhi4/reduxredux-av.png" />
 	<meta name="image:Favicon" content="http://static.tumblr.com/su4usjb/RbCmk8dc8/reduxredux-ico.gif" />
 	<meta name="image:Header" content="http://static.tumblr.com/su4usjb/qGOmkhhhi/reduxredux-header.png" />
-    <meta name="image:Background" content="http://static.tumblr.com/su4usjb/rPLmk8dg2/reduxredux-bg.png" />
+	<meta name="image:Wrapper Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
+    <meta name="image:Sidebar Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
+	<meta name="image:Post Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
+	<meta name="image:Background" content="http://static.tumblr.com/su4usjb/rPLmk8dg2/reduxredux-bg.png" />
     <meta name="color:Title" content="#FFFFFF" />
     <meta name="color:Post Title" content="#66ccff" />
     <meta name="color:Post Body" content="#CCCCCC" />
+	
     
     <meta name="color:Sidebar Body" content="#66ccff" />
+	
 
 	<meta name="if:Hide Date And Notes" content="0" />
     <meta name="if:Hide Tags And Source" content="0" />
@@ -73,7 +78,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
             width: 982px;
             margin: 0 auto;
 		    padding: 10px;
-			background: rgba(0,0,0,.6)
+			background: url('{image:Wrapper Background}') {color:Wrapper Color} top left fixed repeat;
 		
 		}
         
@@ -99,7 +104,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
             
                 #wrapper #content .post {
                     font-family: {font:Body};
-                    background: rgba(0,0,0,.4);
+                    background: {color:Post Color} url('{image:Post Background}') top left fixed repeat;
                     color: {color:Post Body};
                     margin: 1px;
 					padding: 10px;
@@ -561,7 +566,7 @@ color: {color:Background};
                             border-radius: 3px;
                         }                
                 #wrapper #sidebar #top {
-                    background: rgba(0,0,0,.4);
+                    background: {color:Sidebar Color} url('{image:Sidebar Background}') top left fixed repeat;
                     padding: 0 20px;
                     
                     -webkit-border-top-left-radius: {text:Corner Radius}px;
