@@ -69,7 +69,10 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
     <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <style type="text/css">
-        /* Standard Redux stuff */
+ 
+
+ 
+ /* Standard Redux stuff */
         body 
 		
 		{
@@ -1016,12 +1019,12 @@ ul#likes {
 </head>
 <body>
     <div id="wrapper">
-        <div id="title">
+        <center><div id="title">
             <a href="/">
                 {block:IfHeaderImage}<img src="{image:Header}" />{/block:IfHeaderImage}
                 {block:IfNotHeaderImage}{Title}{/block:IfNotHeaderImage}
             </a>
-        </div>
+        </div></center>
         
         <div id="content">
            
@@ -1064,12 +1067,12 @@ ul#likes {
 {/block:Caption}
 {/Block:Photo}
 
-{block:Photoset}
+<center>{block:Photoset}
 {Photoset-700}
 {block:Caption}
         {Caption}
     {/block:Caption}
-{/block:Photoset}                   
+{/block:Photoset}</center>                  
                     {block:Video}
                         <div class="media">{Video-500}</div>
                         {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
