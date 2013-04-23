@@ -1,5 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--Redux Redux by Teratoma.tk
+<!--
+.................. . .................. ... .. ...    .. ... ...    ........................... .......MMMMM?..................... .........
+................8MMMMM8. ........          ....   ...... ....   ....   .     .. ... ................     MMM?.................      .      .
+..............MMMMMMMMMMM,........MMMMM..MMMMMD.MMMMMM..    .    ..     MMMMMMMMMMM...   ......  $MMMMMMMMMM? ....   ....    MMMMMMM.MMMMMM 
+MMMMMMMMMM ..MMMMM   MMMM7.....MM  MMMM. :MMMMD. MMMMM  MMMMMMM MMMMMM . MMMMM.MMMN...     .... MMMMMM.MMMMM?.MMMMMM.MMMMMM... MMMMM.MMMM.. 
+MMMMMMMMMMM. MMMMMMMMMMMMM.+MMMMMMMMMMM.  MMMMD  MMMMM..MMMMMMN MMMMMM. .MMMMM.     MMMMMMMMM ..MMMMM ..MMMM? MMMMMM MMMMMM ... .NMMMM.  ...
+.MMMMM MMMM  MMMMMM       =MMMMM..$MMMM.  MMMMD  MMMMM.. .MMMMMMMMN  ....MMMMM....?MMMM   MMMMO MMMMM ..MMMM? .MMMMM .?MMMM   . MMMMMMMM..  
+.MMMMM .......MMMMMMMMMM .ZMMMMM...MMMM...MMMMMMMMMMMM  .. .MMMMMM. ... MMMMMMM...MMMMMNMMMMMMM MMMMMMMMMMMMM~ MMMMM  +MMMM  MMMMMM MMMMMMM 
+.MMMMM.,........MMMMMM....ZMMMMM ..MMMMM.. MMMMMMMMMMMM. ?MMMM NMMMM,   MMMMMMM.. MMMMM           MMMMMMMMMMM~ NMMMM..MMMMM  MMMMMM MMMMMMM.
+MMMMMMM................  ..$MMMMMMMMMMMM  .. .   .   ...MMMMMM MMMMMMM ............MMMMMMMMMMM7   ...MMMM....  MMMMMMMMMMMM ......  .....  
+..  .   ...... .............. MMMMMM....   .     .   ... ............. ..............MMMMMMM....... ............. MMMMMM    . ........ .....
+...................       ..    .   .                              .          .   .. .. ... ...........   .      .   .. ... .. ...........  
+Redux Redux by Teratoma.tk
 Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from themes.edada.ms-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <style> .my-like { background-image: url(http://static.tumblr.com/su4usjb/mYTmkhpfb/reduxredux-like2.png) !important; height:17px; width:19px; cursor:pointer; display:inline-block; vertical-align:top; } .my-liked, .my-like:hover { background-image: url(http://static.tumblr.com/su4usjb/zNomkhpe7/reduxredux-like1.png) !important; height:17px; width:19px; cursor:pointer; display:inline-block; vertical-align:top; } </style> <script> window.onload = function () { document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' ); document.addEventListener( 'click', function ( event ) { var myLike = event.target; if( myLike.className.indexOf( 'my-like' ) > -1 ) { var frame = document.getElementById( 'my-like-frame' ), liked = ( myLike.className == 'my-liked' ), command = liked ? 'unlike' : 'like', reblog = myLike.getAttribute( 'data-reblog' ), id = myLike.getAttribute( 'data-id' ), oauth = reblog.slice( -8 ); frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id; liked ? myLike.className = 'my-like' : myLike.className = 'my-liked'; }; }, false ); }; </script
@@ -8,29 +20,34 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
     
 	<meta name="text:Corner Radius" content="5" />
     <meta name="text:Custom HTML" content="Replace this with your own text or HTML" />
-    <meta name="if:Show People I Follow" content="1" />
+    <meta name="text:Disqus Shortname" content="" />
+	
+	<meta name="if:Show People I Follow" content="1" />
     <meta name="if:Show Tags" content="1" />
     <meta name="if:Show Tweet This" content="1" />
     <meta name="if:Show Album Art on Audio Posts" content="1" />
     <meta name="if:Likes in sidebar" content="1"/>
     <meta name="if:Enable Jump Pagination" content="0" />
     <meta name="if:Sidebar On Left" content="0" />
-    <meta name="text:Disqus Shortname" content="" />
-    <meta name="image:Avatar" content="http://static.tumblr.com/su4usjb/nxXmkhhi4/reduxredux-av.png" />
+    
+    
+	<meta name="image:Avatar" content="http://static.tumblr.com/su4usjb/nxXmkhhi4/reduxredux-av.png" />
 	<meta name="image:Favicon" content="http://static.tumblr.com/su4usjb/RbCmk8dc8/reduxredux-ico.gif" />
 	<meta name="image:Header" content="http://static.tumblr.com/su4usjb/qGOmkhhhi/reduxredux-header.png" />
 	<meta name="image:Wrapper Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
     <meta name="image:Sidebar Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
 	<meta name="image:Post Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
 	<meta name="image:Background" content="http://static.tumblr.com/su4usjb/rPLmk8dg2/reduxredux-bg.png" />
-    <meta name="color:Title" content="#FFFFFF" />
+    
+	<meta name="color:Title" content="#FFFFFF" />
     <meta name="color:Post Title" content="#66ccff" />
     <meta name="color:Post Body" content="#CCCCCC" />
-	
-    
     <meta name="color:Sidebar Body" content="#66ccff" />
+	<meta name="color:Post Footer" content="#EAEAEA" />
+    <meta name="color:Post Footer Text" content="#666666" />
+    
+    
 	
-
 	<meta name="if:Hide Date And Notes" content="0" />
     <meta name="if:Hide Tags And Source" content="0" />
     <meta name="if:Hide Follow Button" content="0" />
@@ -38,7 +55,8 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
     <meta name="if:Hide Misc Links" content="0" />
     <meta name="if:Hide Search" content="0" />
     <meta name="if:Hide Copyright" content="0" />
-    <meta name="font:Title" content="Arial" />
+    
+	<meta name="font:Title" content="Arial" />
     <meta name="font:Sidebar" content="Arial" />
     <meta name="font:Post Titles" content="Arial" />
     <meta name="font:Post Body" content="Arial" />
@@ -566,7 +584,7 @@ color: {color:Background};
                             border-radius: 3px;
                         }                
                 #wrapper #sidebar #top {
-                    background: {color:Sidebar Color} url('{image:Sidebar Background}') top left fixed repeat;
+                    background: url('{image:Sidebar Background}') top left fixed repeat;
                     padding: 0 20px;
                     
                     -webkit-border-top-left-radius: {text:Corner Radius}px;
@@ -805,7 +823,7 @@ color: {color:Background};
                             }
                 
                     #wrapper #sidebar #bottom {
-                        background: rgba(0,0,0,.4);
+                        background: url('{image:Sidebar Background}') top left fixed repeat;
                         width: 250px;
                         height: 25px;
                         -webkit-border-bottom-left-radius: {text:Corner Radius}px;
@@ -908,9 +926,9 @@ ul#likes {
         {block:IfHideMiscLinks}#buttons { display: none !important; }{/block:IfHideMiscLinks}
         {block:IfHideSearch}#search, #search-scope { display: none !important; }{/block:IfHideSearch}
         {block:IfHideCopyright}#copyright { display: none !important; }{/block:IfHideCopyright}
-        #sidebar #top { background: rgba(0,0,0,.4) !important; }
-        .post .footer, .footer .date, .footer .notes, .notecontainer
-        .footer a, .notecontainer a { color: {color:post body Text} !important; }
+        #sidebar #top { background-color: {color:Sidebar Background} !important; }
+        .post .footer, .footer .date, .footer .notes, .notecontainer { background-color: {block:IfTransparentPostFooter}transparent{/block:IfTransparentPostFooter}{block:IfNotTransparentPostFooter}{color:Post Footer}{/block:IfNotTransparentPostFooter} !important; }
+        .footer a, .notecontainer a { color: {color:Post Footer Text} !important; }
         .post { background: rgba(0,0,0,.4) !important; }
         {block:IfTransparentPostBackground}#content .bottom { background-image: none !important; }{/block:IfTransparentPostBackground}
         {block:IfTransparentSidebarBackground}#sidebar #top, #sidebar #bottom, #search-scope input { background-color: transparent !important; background-image: none !important; }{/block:IfTransparentSidebarBackground}
