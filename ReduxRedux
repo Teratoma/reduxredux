@@ -94,7 +94,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
     					}
         
         #wrapper {
-            width: {text: Wrapper Width};
+            width: {text:Wrapper Width};
             margin: 0 auto;
 		    padding: 10px;
 			background: url('{image:Wrapper Background}') {color:Wrapper Color} top left fixed repeat;
@@ -118,7 +118,8 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
             
             #wrapper #content {
                 width: {text:Content Width};
-                float: {block:IfSidebarOnLeft}right{/block:IfSidebarOnLeft}{block:IfNotSidebarOnLeft}left{/block:IfNotSidebarOnLeft};
+                
+				float: {block:IfSidebarOnLeft}right{/block:IfSidebarOnLeft}{block:IfNotSidebarOnLeft}left{/block:IfNotSidebarOnLeft};
             }
             
                 #wrapper #content .post {
@@ -1007,7 +1008,7 @@ ul#likes {
                 margin: 0;
             }
 #tumblr_lightbox {
-       max-width: 982px !important;
+       max-width: {text:Wrapper Width} !important;
 	   max-height: auto !important;}
 	   </style>
     <![endif]-->
