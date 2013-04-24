@@ -127,7 +127,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
             
                 #wrapper #content .post {
                     font-family: {font:Body};
-                    background: {color:Post Color} url('{image:Post Background}') top left fixed repeat;
+                    background: url('{image:Post Background}') top left fixed repeat;
                     color: {color:Post Body};
                     margin: 1px;
 					padding: 10px;
@@ -858,7 +858,7 @@ max-width: 982px !important;
 #customhtml {
                     display:none;
                     font-family: {font:Post Body} !important;
-                    background: rgba(0,0,0,.4);
+                    background: url('{image:Post Background}') top left fixed repeat;
                     color: {color:Post Body};
                     margin: 0 0 10px 0;
 					padding: 10px;
@@ -934,7 +934,7 @@ ul#likes {
         #sidebar #top { background-color: {color:Sidebar Background} !important; }
         .post .footer, .footer .date, .footer .notes, .notecontainer { background-color: {block:IfTransparentPostFooter}transparent{/block:IfTransparentPostFooter}{block:IfNotTransparentPostFooter}{color:Post Footer}{/block:IfNotTransparentPostFooter} !important; }
         .footer a, .notecontainer a { color: {color:Post Footer Text} !important; }
-        .post { background: rgba(0,0,0,.4) !important; }
+        .post { background: {text:Post Background} !important; }
         {block:IfTransparentPostBackground}#content .bottom { background-image: none !important; }{/block:IfTransparentPostBackground}
         {block:IfTransparentSidebarBackground}#sidebar #top, #sidebar #bottom, #search-scope input { background-color: transparent !important; background-image: none !important; }{/block:IfTransparentSidebarBackground}
         {block:IfNotTransparentSidebarBackground}#top:after { content: ' ';display: block;background: rgba(0,0,0,.4)};position: absolute;height: 10px;width: 250px;margin-left: -20px;border-bottom-left-radius: 24px;border-bottom-right-radius: 24px; }{/block:IfNotTransparentSidebarBackground}
