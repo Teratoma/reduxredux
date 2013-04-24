@@ -1,25 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
-                                     XXXXXX                                     
-   XXXXXX  XX                          XXXX                   XXXXXXX  XXXXXX   
-   XXXXXXXXXXX                 XXXXXXXXXXXX                    XXXXXX  XXXXX    
-    XXXXX XXXX                XXXXX   XXXXX   XXXXX   XXXXX      XXXXX XXX      
-    XXXXX       XXXXXXXXXX    XXXXX   XXXXX   XXXXX   XXXXX        XXXXX        
-    XXXXX      XXXXX   XXXXX  XXXXX   XXXXX    XXXX    XXXX       XXXXXXXX      
-   XXXXXXX    XXXXXXXXXXXXXX  XXXXXX XXXXXX    XXXX    XXXX   XXXXXX  XXXXXXX   
-   XXXXXXX    XXXXXX            XXXXX  XXXXX   XXXX    XXXX   XXXXXX  XXXXXXX   
-               XXXXX   XXXX                    XXXXXXXXXXXXXX                   
-                 XXXXXXXX                        XXXX  XXXXXX                
-                                     XXXXXX                                     
-   XXXXXX  XX                          XXXX                   XXXXXXX  XXXXXX   
-   XXXXXXXXXXX                 XXXXXXXXXXXX                    XXXXXX  XXXXX    
-    XXXXX XXXX                XXXXX   XXXXX   XXXXX   XXXXX      XXXXX XXX      
-    XXXXX       XXXXXXXXXX    XXXXX   XXXXX   XXXXX   XXXXX        XXXXX        
-    XXXXX      XXXXX   XXXXX  XXXXX   XXXXX    XXXX    XXXX       XXXXXXXX      
-   XXXXXXX    XXXXXXXXXXXXXX  XXXXXX XXXXXX    XXXX    XXXX   XXXXXX  XXXXXXX   
-   XXXXXXX    XXXXXX            XXXXX  XXXXX   XXXX    XXXX   XXXXXX  XXXXXXX   
-               XXXXX   XXXX                    XXXXXXXXXXXXXX  by Teratoma.tk                 
-                 XXXXXXXX                        XXXX  XXXXXX                   				 
+                            XXXX                            
+                             XXX                            
+  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXN  
+   XXX  XX    XXXX    XXXX   XXX  XXXX  XXXX     XXX XX     
+   XXX     NXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
+   XXX    XXXXX  XXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
+  XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
+           XXXXXXXXX                XXXXXXXXX                
+               XX           XXXX                            
+                             XXX                            
+  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXN  
+   XXX  XX    XXXX    XXXX   XXX  XXXX  XXXX     XXX XX     
+   XXX     NXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
+   XXX    XXXXX  XXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
+  XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
+           XXXXXXXXX                XXXXXXXXX  by Teratoma.tk             
+               XX   			   
+                           				 
 
 Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from http://themes.edada.ms-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
