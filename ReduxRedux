@@ -18,7 +18,6 @@
            XXXXXXXXX                XXXXXXXXX  by Teratoma.tk             
                XX   			   
                            				 
-
 Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from http://themes.edada.ms-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <style> .my-like { background-image: url(http://static.tumblr.com/su4usjb/mYTmkhpfb/reduxredux-like2.png) !important; height:17px; width:19px; cursor:pointer; display:inline-block; vertical-align:top; } .my-liked, .my-like:hover { background-image: url(http://static.tumblr.com/su4usjb/zNomkhpe7/reduxredux-like1.png) !important; height:17px; width:19px; cursor:pointer; display:inline-block; vertical-align:top; } </style> <script> window.onload = function () { document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' ); document.addEventListener( 'click', function ( event ) { var myLike = event.target; if( myLike.className.indexOf( 'my-like' ) > -1 ) { var frame = document.getElementById( 'my-like-frame' ), liked = ( myLike.className == 'my-liked' ), command = liked ? 'unlike' : 'like', reblog = myLike.getAttribute( 'data-reblog' ), id = myLike.getAttribute( 'data-id' ), oauth = reblog.slice( -8 ); frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id; liked ? myLike.className = 'my-like' : myLike.className = 'my-liked'; }; }, false ); }; </script
