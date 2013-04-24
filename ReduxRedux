@@ -1,18 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
-.................. . .................. ... .. ...    .. ... ...    ........................... .......MMMMM?..................... .........
-................8MMMMM8. ........          ....   ...... ....   ....   .     .. ... ................     MMM?.................      .      .
-..............MMMMMMMMMMM,........MMMMM..MMMMMD.MMMMMM..    .    ..     MMMMMMMMMMM...   ......  $MMMMMMMMMM? ....   ....    MMMMMMM.MMMMMM 
-MMMMMMMMMM ..MMMMM   MMMM7.....MM  MMMM. :MMMMD. MMMMM  MMMMMMM MMMMMM . MMMMM.MMMN...     .... MMMMMM.MMMMM?.MMMMMM.MMMMMM... MMMMM.MMMM.. 
-MMMMMMMMMMM. MMMMMMMMMMMMM.+MMMMMMMMMMM.  MMMMD  MMMMM..MMMMMMN MMMMMM. .MMMMM.     MMMMMMMMM ..MMMMM ..MMMM? MMMMMM MMMMMM ... .NMMMM.  ...
-.MMMMM MMMM  MMMMMM       =MMMMM..$MMMM.  MMMMD  MMMMM.. .MMMMMMMMN  ....MMMMM....?MMMM   MMMMO MMMMM ..MMMM? .MMMMM .?MMMM   . MMMMMMMM..  
-.MMMMM .......MMMMMMMMMM .ZMMMMM...MMMM...MMMMMMMMMMMM  .. .MMMMMM. ... MMMMMMM...MMMMMNMMMMMMM MMMMMMMMMMMMM~ MMMMM  +MMMM  MMMMMM MMMMMMM 
-.MMMMM.,........MMMMMM....ZMMMMM ..MMMMM.. MMMMMMMMMMMM. ?MMMM NMMMM,   MMMMMMM.. MMMMM           MMMMMMMMMMM~ NMMMM..MMMMM  MMMMMM MMMMMMM.
-MMMMMMM................  ..$MMMMMMMMMMMM  .. .   .   ...MMMMMM MMMMMMM ............MMMMMMMMMMM7   ...MMMM....  MMMMMMMMMMMM ......  .....  
-..  .   ...... .............. MMMMMM....   .     .   ... ............. ..............MMMMMMM....... ............. MMMMMM    . ........ .....
-...................       ..    .   .                              .          .   .. .. ... ...........   .      .   .. ... .. ...........  
-Redux Redux by Teratoma.tk
-Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from themes.edada.ms-->
+                                     XXXXXX                                     
+   XXXXXX  XX                          XXXX                   XXXXXXX  XXXXXX   
+   XXXXXXXXXXX                 XXXXXXXXXXXX                    XXXXXX  XXXXX    
+    XXXXX XXXX                XXXXX   XXXXX   XXXXX   XXXXX      XXXXX XXX      
+    XXXXX       XXXXXXXXXX    XXXXX   XXXXX   XXXXX   XXXXX        XXXXX        
+    XXXXX      XXXXX   XXXXX  XXXXX   XXXXX    XXXX    XXXX       XXXXXXXX      
+   XXXXXXX    XXXXXXXXXXXXXX  XXXXXX XXXXXX    XXXX    XXXX   XXXXXX  XXXXXXX   
+   XXXXXXX    XXXXXX            XXXXX  XXXXX   XXXX    XXXX   XXXXXX  XXXXXXX   
+               XXXXX   XXXX                    XXXXXXXXXXXXXX                   
+                 XXXXXXXX                        XXXX  XXXXXX                
+                                     XXXXXX                                     
+   XXXXXX  XX                          XXXX                   XXXXXXX  XXXXXX   
+   XXXXXXXXXXX                 XXXXXXXXXXXX                    XXXXXX  XXXXX    
+    XXXXX XXXX                XXXXX   XXXXX   XXXXX   XXXXX      XXXXX XXX      
+    XXXXX       XXXXXXXXXX    XXXXX   XXXXX   XXXXX   XXXXX        XXXXX        
+    XXXXX      XXXXX   XXXXX  XXXXX   XXXXX    XXXX    XXXX       XXXXXXXX      
+   XXXXXXX    XXXXXXXXXXXXXX  XXXXXX XXXXXX    XXXX    XXXX   XXXXXX  XXXXXXX   
+   XXXXXXX    XXXXXX            XXXXX  XXXXX   XXXX    XXXX   XXXXXX  XXXXXXX   
+               XXXXX   XXXX                    XXXXXXXXXXXXXX  by Teratoma.tk                 
+                 XXXXXXXX                        XXXX  XXXXXX                   				 
+
+Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from http://themes.edada.ms-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <style> .my-like { background-image: url(http://static.tumblr.com/su4usjb/mYTmkhpfb/reduxredux-like2.png) !important; height:17px; width:19px; cursor:pointer; display:inline-block; vertical-align:top; } .my-liked, .my-like:hover { background-image: url(http://static.tumblr.com/su4usjb/zNomkhpe7/reduxredux-like1.png) !important; height:17px; width:19px; cursor:pointer; display:inline-block; vertical-align:top; } </style> <script> window.onload = function () { document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' ); document.addEventListener( 'click', function ( event ) { var myLike = event.target; if( myLike.className.indexOf( 'my-like' ) > -1 ) { var frame = document.getElementById( 'my-like-frame' ), liked = ( myLike.className == 'my-liked' ), command = liked ? 'unlike' : 'like', reblog = myLike.getAttribute( 'data-reblog' ), id = myLike.getAttribute( 'data-id' ), oauth = reblog.slice( -8 ); frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id; liked ? myLike.className = 'my-like' : myLike.className = 'my-liked'; }; }, false ); }; </script
 <head>
@@ -1326,7 +1335,9 @@ ul#likes {
             </div>
             
             <div id="bottom"></div>
-            <div id="copyright">&copy; {CopyrightYears} <a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a></div>
+            <div id="copyright">&copy; {CopyrightYears} <a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a><br><a href="http://reduxredux.teratoma.tk">
+ <img src="http://static.tumblr.com/su4usjb/0tUmlrwrl/reduxredux-url.png"/>
+</a></div>
         </div>
         
         <div class="clear"></div>
