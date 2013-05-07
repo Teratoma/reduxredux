@@ -835,9 +835,8 @@ color: {color:Background};
                             }
                 
                     #wrapper #sidebar #bottom {
-                        background: url('{image:Sidebar Background}') top left fixed repeat;
-                        width: 250px;
-                        height: 25px;
+                        background: none top left fixed repeat;
+                        
                         -webkit-border-bottom-left-radius: {text:Corner Radius}px;
                         -webkit-border-bottom-right-radius: {text:Corner Radius}px;
                         -moz-border-radius-bottomleft: 10px;
@@ -848,13 +847,13 @@ color: {color:Background};
                     
                     #wrapper #sidebar #copyright {
                         text-align: center;
-                        color: {color:Sidebar Two};
+                        color: {color:Sidebar One};
                         font-size: 12px;
                         margin-bottom: 10px;
                     }
                     
                         #wrapper #sidebar #copyright a {
-                            color: {color:Sidebar Two};
+                            color: {color:Sidebar One};
                             margin-left: 15px;
                         }
 
