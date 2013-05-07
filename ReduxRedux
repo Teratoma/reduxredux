@@ -735,7 +735,7 @@ color: {color:Background};
                     }
                     
                     #wrapper #sidebar #top .heading#followontumblr {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-en_US.png') center left no-repeat {color:Background};
+                        background: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-en_US.png') center left no-repeat {color:Sidebar Two} !important;
                         text-indent: -9999px;
                         -moz-border-radius: 4px;
                         -webkit-border-radius: 4px;
