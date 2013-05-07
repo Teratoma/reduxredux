@@ -1328,15 +1328,15 @@ ul#likes {
                     {/block:Following}
                 {/block:IfShowPeopleIFollow}
                 
-                
+                  <div id="bottom"></div>
+            <div id="copyright"><p>&copy; {CopyrightYears} <a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a><br><a href="http://reduxredux.teratoma.tk">
+ <img src="http://static.tumblr.com/su4usjb/0tUmlrwrl/reduxredux-url.png"/>
+</a><br></div>
+        </div>
                 
             </div>
             
-            <div id="bottom"></div>
-            <div id="copyright">&copy; {CopyrightYears} <a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a><br><a href="http://reduxredux.teratoma.tk">
- <img src="http://static.tumblr.com/su4usjb/0tUmlrwrl/reduxredux-url.png"/>
-</a></div>
-        </div>
+          
         
         <div class="clear"></div>
     </div>
