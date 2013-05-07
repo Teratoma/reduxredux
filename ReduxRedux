@@ -2,17 +2,17 @@
 <!--
                             XXXX                            
                              XXX                            
-  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXN  
+  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXX  
    XXX  XX    XXXX    XXXX   XXX  XXXX  XXXX     XXX XX     
-   XXX     NXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
+   XXX     XXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
    XXX    XXXXXXXXXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
   XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
            XXXXXXXXX                XXXXXXXXX                
                XX           XXXX                            
                              XXX                            
-  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXN  
+  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXX  
    XXX  XX    XXXX    XXXX   XXX  XXXX  XXXX     XXX XX     
-   XXX     NXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
+   XXX     XXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
    XXX    XXXXXXXXXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
   XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
            XXXXXXXXX                XXXXXXXXX  by Teratoma.tk             
@@ -456,7 +456,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                                                 }
                         
                         #wrapper #content .bottom {
-                            background: url('http://assets.tumblr.com/themes/redux/shadow-post.png') top center no-repeat transparent;
+                            background: none top center no-repeat transparent;
                    
                             height: 10px;
                             margin: 0 auto;
