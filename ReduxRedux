@@ -1,88 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
-                            XXXX                            
-                             XXX                            
-  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXX  
-   XXX  XX    XXXX    XXXX   XXX  XXXX  XXXX     XXX XX     
-   XXX     XXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
-   XXX    XXXXXXXXXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
-  XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
-           XXXXXXXXX                XXXXXXXXX                
-               XX           XXXX                            
-                             XXX                            
-  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXX  
-   XXX  XX    XXXX    XXXX   XXX  XXXX  XXXX     XXX XX     
-   XXX     XXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
-   XXX    XXXXXXXXXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
-  XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
-           XXXXXXXXX                XXXXXXXXX  by Teratoma.tk             
-               XX                   				 
+                                         
+        .                                 .o8       oooo               
+      .o8                                "888       `888               
+    .o888oo oooo  oooo  ooo. .oo.  .oo.   888oooo.   888  oooo d8b     
+      888   `888  `888  `888P"Y88bP"Y88b  d88' `88b  888  `888""8P     
+      888    888   888   888   888   888  888   888  888   888        
+      888 .  888   888   888   888   888  888   888  888   888    .o. 
+      "888"  `V88V"V8P' o888o o888o o888o `Y8bod8P' o888o d888b   Y8P
 
-Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from http://themes.edada.ms-->
+-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<style> .my-like { background-image: url(http://static.tumblr.com/su4usjb/l2Wmmg35p/reduxredux-like2.png) !important; height:17px; width:19px; cursor:pointer; display:inline-block; vertical-align:top; } .my-liked, .my-like:hover { background-image: url(http://static.tumblr.com/su4usjb/zNomkhpe7/reduxredux-like1.png) !important; height:17px; width:19px; cursor:pointer; display:inline-block; vertical-align:top; } </style> <script> window.onload = function () { document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' ); document.addEventListener( 'click', function ( event ) { var myLike = event.target; if( myLike.className.indexOf( 'my-like' ) > -1 ) { var frame = document.getElementById( 'my-like-frame' ), liked = ( myLike.className == 'my-liked' ), command = liked ? 'unlike' : 'like', reblog = myLike.getAttribute( 'data-reblog' ), id = myLike.getAttribute( 'data-id' ), oauth = reblog.slice( -8 ); frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id; liked ? myLike.className = 'my-like' : myLike.className = 'my-liked'; }; }, false ); }; </script
 <head>
     <!-- DEFAULT VARIABLES -->
-    <meta name="text:Wrapper Width" content="982px" />
-	<meta name="text:Content Width" content="722px" />
-	<meta name="text:Corner Radius" content="5" />
-    <meta name="text:Custom HTML" content="Replace this with your own text or HTML" />
-    <meta name="text:Disqus Shortname" content="" />
-	
-	<meta name="if:Show People I Follow" content="1" />
+    <meta name="color:Background" content="#3b627e" />
+    
+    <meta name="font:Title" content="Arial" />
+    <meta name="font:Body" content="Arial" />
+    <meta name="font:Accent" content="Lucida Sans" />
+    
+    <meta name="if:Show People I Follow" content="1" />
     <meta name="if:Show Tags" content="1" />
-    <meta name="if:Show Tweet This" content="1" />
     <meta name="if:Show Album Art on Audio Posts" content="1" />
-    <meta name="if:Likes in sidebar" content="1"/>
     <meta name="if:Enable Jump Pagination" content="0" />
-    <meta name="if:Sidebar On Left" content="0" />
     
+    <meta name="text:Disqus Shortname" content="" />
     
-	<meta name="image:Avatar" content="http://static.tumblr.com/su4usjb/nxXmkhhi4/reduxredux-av.png" />
-	<meta name="image:Favicon" content="http://static.tumblr.com/su4usjb/RbCmk8dc8/reduxredux-ico.gif" />
-	<meta name="image:Header" content="http://static.tumblr.com/su4usjb/qGOmkhhhi/reduxredux-header.png" />
-	<meta name="image:Wrapper Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
-    <meta name="image:Sidebar Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
-	<meta name="image:Post Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
-	<meta name="image:Background" content="http://static.tumblr.com/su4usjb/rPLmk8dg2/reduxredux-bg.png" />
+    <meta name="image:Header" content="" />
+    <meta name="image:Background" content="" />
     
-	<meta name="color:Title" content="#FFFFFF" />
-    <meta name="color:Post Title" content="#66ccff" />
-    <meta name="color:Post Body" content="#CCCCCC" />
-    <meta name="color:Sidebar One" content="#66ccff" />
-	<meta name="color:Sidebar Two" content="#ffffff" />
-	<meta name="color:Post Footer" content="#EAEAEA" />
-    <meta name="color:Post Footer Text" content="{color:Post Footer Text}666" />
-    
-    
-	
-	<meta name="if:Hide Date And Notes" content="0" />
-    <meta name="if:Hide Tags And Source" content="0" />
-    <meta name="if:Hide Follow Button" content="0" />
-    <meta name="if:Hide Ask And Submit" content="0" />
-    <meta name="if:Hide Misc Links" content="0" />
-    <meta name="if:Hide Search" content="0" />
-    <meta name="if:Hide Copyright" content="0" />
-    
-	<meta name="font:Title" content="Arial" />
-    <meta name="font:Sidebar" content="Arial" />
-    <meta name="font:Post Titles" content="Arial" />
-    <meta name="font:Post Body" content="Arial" />
-        
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{Title}{block:SearchPage}, {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
     {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
-    <link rel="shortcut icon" href="{image:Favicon}" />
+    <link rel="shortcut icon" href="{Favicon}" />
     <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <style type="text/css">
- 
-
- 
- /* Standard Redux stuff */
-        body 
-		
-		{
+        body {
             background: {color:Background} url('{image:Background}') top left fixed repeat;
             margin: 0;
             padding: 0;
@@ -94,30 +48,23 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
             height: 0px;
             overflow: hidden;
         }
-                a img {
-        max-width: 100%;    
-		max-height: auto !important;
-		border: none;
-        -moz-border-radius: {text:Corner Radius}px;
-                        -webkit-border-radius: {text:Corner Radius}px;
-                        border-radius: {text:Corner Radius}px;
-    					}
+        
+        a img {
+            border: none;
+        }
         
         #wrapper {
-            width: {text:Wrapper Width};
+            width: 845px;
             margin: 0 auto;
-		    padding: 10px;
-			background: url('{image:Wrapper Background}') {color:Wrapper Color} top left fixed repeat;
-		
-		}
+        }
         
             #wrapper #title {
-                margin: 1px 0;
-                color: {color:Title};
+                margin: 30px 0;
+                color: #fff;
                 font-size: 50px;
                 font-weight: bold;
                 font-family: {font:Title};
-                text-shadow: 2px 3px 5px rgba(0,0,0, 0.5);
+                text-shadow: 1px 3px 5px rgba(0,0,0, 0.5);
                 letter-spacing: -1px;
             }
             
@@ -127,26 +74,20 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                 }
             
             #wrapper #content {
-                width: {text:Content Width};
-                
-				float: {block:IfSidebarOnLeft}right{/block:IfSidebarOnLeft}{block:IfNotSidebarOnLeft}left{/block:IfNotSidebarOnLeft};
+                width: 520px;
+                float: left;
             }
             
                 #wrapper #content .post {
                     font-family: {font:Body};
-                    background: url('{image:Post Background}') top left fixed repeat;
-                    color: {color:Post Body};
-                    margin: 1px;
-					padding: 10px;
+                    background: #fff;
+                    padding: 10px;
                     position: relative;
-					-moz-border-radius: {text:Corner Radius}px;
-                        -webkit-border-radius: {text:Corner Radius}px;
-                        border-radius: {text:Corner Radius}px;
                 }
                     
                     #wrapper #content .post .media {
                         text-align: center;
-                        margin-bottom: 0px;
+                        margin-bottom: 10px;
                     }
                     
                     #wrapper #content .post .quotebg {
@@ -211,12 +152,12 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         }
                         
                         #wrapper #content .post .copy p {
-                            margin: 5px 0 0 0;
+                            margin: 10px 0 0 0;
                             padding: 0;
                         }
                         
                         #wrapper #content .post .copy pre {
-                            margin: 0px;
+                            margin: 10px 0px 10px 0px;
                             padding: 10px;
                             background-color: #e6e6e6;
                             font: normal 11px Courier, monospace;
@@ -228,14 +169,14 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         }
                         
                         #wrapper #content .post .copy img {
-                            max-width: 712px;
+                            max-width: 100%;
                         }
                     
                     #wrapper #content .post .audio {
                         background: #eaeaea;
                         float: left;
                         padding: 7px;
-                        margin-bottom: 0px;
+                        margin-bottom: 10px;
                         -moz-border-radius: 4px;
                         -webkit-border-radius: 4px;
                         border-radius: 4px;
@@ -253,14 +194,14 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                             padding: 8px 13px;
                             height: 13px;
                             float: left;
-                            color: {color:Post Footer Text};
+                            color: #666;
                             font-family: {font:Accent};
                             font-size: 11px;
                             text-transform: lowercase;
                         }
                         
                             #wrapper #content .post .audio .meta a {
-                                color: {color:Post Footer Text};
+                                color: #666;
                                 text-decoration: none;
                             }
                     
@@ -276,7 +217,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         -moz-border-radius: 8px;
                         -webkit-border-radius: 8px;
                         border-radius: 8px;
-                        margin: 0;
+                        margin: 0 0 15px 0;
                         padding: 15px 20px;
                         position: relative;
                     }
@@ -303,18 +244,18 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         }
                     
                     #wrapper #content .post .title {
-                        color: {color:Post Title};
+                        color: #494949;
                         font-size: 16px;
                         font-weight: bold;
                         padding: 10px 10px 0 10px;
                     }
                     
                     #wrapper #content .post img {
-                      max-width: 712px%;
+                      max-width: 500px;
                     }
                                         
                     #wrapper #content .post .chat {
-                        
+                        background-color: #fff;
                         border-left: 5px solid #dedddd;
                         margin: 10px 10px 0 10px;
                         font-size: 14px;
@@ -325,14 +266,14 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         }
                         
                             #wrapper #content .post .chat .lines .line {
-                                background-color: rgba(255,255,255,0.2);
-                                color: #cccccc;
+                                background-color: #eaeaea;
+                                color: #494949;
                                 margin-bottom: 1px;
                                 padding: 3px 5px;
                             }
                             
                             #wrapper #content .post .chat .lines .line.even {
-                                background-color: rgba(255,255,255,0.1);
+                                background-color: #dedddd;
                             }
                         
                         #wrapper #content .post .link {
@@ -357,15 +298,15 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                             }
                     
                     #wrapper #content .post .footer {
-                     
+                        background: #eaeaea;
                         -moz-border-radius: 4px;
                         -webkit-border-radius: 4px;
                         border-radius: 4px;
                         font-family: {font:Accent};
                         font-size: 11px;
-                        color: {color:Post Footer Text};
+                        color: #666;
                         padding: 5px 10px;
-                        margin-top: 0px;
+                        margin-top: 10px;
                     }
                         
                         #wrapper #content .post .footer.for_permalink:hover {
@@ -377,18 +318,18 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         #wrapper #content .post .footer .date {
                             width: 67%;
                             float: left;
-                            color: {color:Post Footer Text};
+                            color: #666;
                         }
                         
                         #wrapper #content .post .footer .notes {
                             width: 33%;
                             float: right;
                             text-align: right;
-                            color: {color:Post Footer Text};
+                            color: #666;
                         }
                             
                             #wrapper #content .post .footer .notes a {
-                                color: {color:Post Footer Text};
+                                color: #666;
                             }
                             
                             #wrapper #content .post .footer .tags a {
@@ -430,7 +371,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         }
                         
                             #wrapper #content .post .copy blockquote {
-                                margin: 0px;
+                                margin: 10px 0px 10px 10px;
                                 padding-left: 15px;
                                 border-left: solid 4px #dcdcdc;
                             }
@@ -456,9 +397,9 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                                                 }
                         
                         #wrapper #content .bottom {
-                            background: none top center no-repeat transparent;
-                   
-                            height: 10px;
+                            background: url('http://assets.tumblr.com/themes/redux/shadow-post.png') top center no-repeat transparent;
+                            width: 513px;
+                            height: 40px;
                             margin: 0 auto;
                         }
                         
@@ -469,8 +410,8 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         }
                         
                             #wrapper #content #navigation a {
-                                background-color: rgba(0,0,0,0.2);
-                                color: #CCC;
+                                background-color: #fff;
+                                color: {color:Background};
                                 padding: 5px 10px;
                                 text-decoration: none;
                                 margin-left: 25px;
@@ -490,7 +431,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                             
                             #wrapper #content #navigation.jump_pagination .current_page {
                                 color: #fff;
-                                background-color: rgba(255,255,255,0.1);
+                                background-color: rgba(255,255,255, 0.1);
                                 border: 2px solid #fff;
                                 padding: 3px 8px;
                                 margin: 0 0 0 4px;
@@ -500,19 +441,19 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                             #wrapper #content #navigation.jump_pagination .jump_page {}
                             
                             #wrapper #content .post .notecontainer {
-                                
+                                background: #eaeaea;
                                 -moz-border-radius: 4px;
                                 -webkit-border-radius: 4px;
                                 border-radius: 4px;
                                 font-family: {font:Accent};
                                 font-size: 11px;
-                                color: {color:Post Footer Text};
-                                margin-top: 0px;
-                                margin-bottom: 0px;
+                                color: #666;
+                                margin-top: 10px;
+                                margin-bottom: -10px;
                             }
                             
                                     #wrapper #content .post .notecontainer a {
-                                        color: {color:Post Footer Text};
+                                        color: #666;
                                         text-decoration: underline;
                                     }
                                     
@@ -542,9 +483,9 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                                             }
                                             
                                             #wrapper #content .post .notecontainer ol.notes li.note blockquote {
-                                                border-left: 2px solid {color:Post Footer Text};
+                                                border-left: 2px solid #666;
                                                 padding: 4px 10px;
-                                                margin: 5px;
+                                                margin: 10px 0px 0px 25px;
                                             }
                                             
                                                 #wrapper #content .post .notecontainer ol.notes li.note blockquote a {
@@ -573,48 +514,35 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
             
             #wrapper #sidebar {
                 width: 250px;
-                float: {block:IfSidebarOnLeft}left{/block:IfSidebarOnLeft}{block:IfNotSidebarOnLeft}right{/block:IfNotSidebarOnLeft};
-                
+                float: right;
+                color: {color:Background};
                 font-family: {font:Accent}
             }
             
                 #wrapper #sidebar a {
                     color: {color:Background};
                 }
-				a:link {
-color: {color:Background};
-}
-#linkbutton{
-                            display: block;
-                            float: left;
-                            background-color: {color:Background};
-                            color: #fff;
-                            padding: 4px 5px;
-                            margin: 0 5px 5px 0;
-                            -webkit-border-radius: 3px;
-                            -moz-border-radius: 3px;
-                            border-radius: 3px;
-                        }                
+                
                 #wrapper #sidebar #top {
-                    background: url('{image:Sidebar Background}') top left fixed repeat;
+                    background: #fff;
                     padding: 0 20px;
                     
-                    -webkit-border-top-left-radius: {text:Corner Radius}px;
-                    -webkit-border-top-right-radius: {text:Corner Radius}px;
+                    -webkit-border-top-left-radius: 10px;
+                    -webkit-border-top-right-radius: 10px;
                     -moz-border-radius-topleft: 10px;
                     -moz-border-radius-topright: 10px;
-                    border-top-left-radius: {text:Corner Radius}px;
-                    border-top-right-radius: {text:Corner Radius}px;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
                 }
                 
                     #wrapper #sidebar #top #avatar {
-                        width: 210px;
-                        height: 270px;
-                        
-                        
+                        width: 146px;
+                        height: 146px;
+                        padding: 8px 0 0 9px;
+                        background: url('http://assets.tumblr.com/themes/redux/avatar-bg.png') top left no-repeat transparent;
                         position: relative;
-                        top: 20px;
-                        
+                        top: -24px;
+                        left: -5px;
                     }
                     
                     #wrapper #sidebar #top #pages {
@@ -632,7 +560,7 @@ color: {color:Background};
                             display: block;
                             float: left;
                             background-color: {color:Background};
-                            color: {color:Sidebar Two};
+                            color: #fff;
                             padding: 4px 5px;
                             margin: 0 5px 5px 0;
                             -webkit-border-radius: 3px;
@@ -662,7 +590,7 @@ color: {color:Background};
                         }
                     
                     #wrapper #sidebar #top #search {
-                        background: {color:Sidebar Two};
+                        background: #fff;
                         border: 1px solid {color:Background};
                         
                         -moz-border-radius: 4px;
@@ -697,7 +625,7 @@ color: {color:Background};
                             
                             #wrapper #sidebar #top #search form .submit {
                                 background: {color:Background};
-                                color: {color:Sidebar Two};
+                                color: #fff;
                                 border: none;
                                 padding: 5px 7px;
                                 margin: 3px 3px 2px 0;
@@ -715,7 +643,7 @@ color: {color:Background};
                             }
                     
                     #wrapper #sidebar #top .heading {
-                        color: {color:Sidebar Two};
+                        color: #fff;
                         font-family: helvetica, arial, sans-serif;
                         font-size: 17px;
                         margin-top: 20px;
@@ -730,12 +658,12 @@ color: {color:Background};
                     }
                     
                     #wrapper #sidebar #top a .heading {
-                        color: {color:Sidebar Two};
+                        color: #fff;
                         text-decoration: none;
                     }
                     
                     #wrapper #sidebar #top .heading#followontumblr {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-en_US.png') center left no-repeat {color:Sidebar Two} !important;
+                        background: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-en_US.png') center left no-repeat {color:Background};
                         text-indent: -9999px;
                         -moz-border-radius: 4px;
                         -webkit-border-radius: 4px;
@@ -770,21 +698,21 @@ color: {color:Background};
                     }
                     
                     #wrapper #sidebar #top .heading#following {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-following.png') right center no-repeat;
+                        background: url('http://assets.tumblr.com/themes/redux/sidebar-following.png') right center no-repeat {color:Background};
                     }
                     
                     #wrapper #sidebar #top .content {
                         margin-top: 2px;
                         padding: 7px 10px;
-                        
-                        color: {color:Post Footer Text};
+                        background: #eaeaea;
+                        color: #666;
                         font-size: 11px;
                         overflow: hidden;
                     }
                     
                         #wrapper #sidebar #top a {
                             text-decoration: none;
-                        color: #CCC;}
+                        }
                     
                         #wrapper #sidebar #top #following-avatars.content {
                             padding: 4px;
@@ -799,8 +727,7 @@ color: {color:Background};
                         }
                         
                             #wrapper #sidebar #top #buttons .button {
-                                
-								width: 35%;
+                                width: 35%;
                                 height: 21px;
                                 float: left;
                                 background: left center no-repeat transparent;
@@ -809,7 +736,7 @@ color: {color:Background};
                             }
                             
                                 #wrapper #sidebar #top #buttons a {
-                                    color: {color:Sidebar One};
+                                    color: {color:Background};
                                     text-decoration: none;
                                 }
                             
@@ -835,138 +762,34 @@ color: {color:Background};
                             }
                 
                     #wrapper #sidebar #bottom {
-                        background: none top left fixed repeat;
-                        
-                        -webkit-border-bottom-left-radius: {text:Corner Radius}px;
-                        -webkit-border-bottom-right-radius: {text:Corner Radius}px;
-                        -moz-border-radius-bottomleft: 10px;
-                        -moz-border-radius-bottomright: 10px;
-                        border-bottom-left-radius: {text:Corner Radius}px;
-                        border-bottom-right-radius: {text:Corner Radius}px;
-						}
+                        background: url('http://assets.tumblr.com/themes/redux/sidebar-bottom.png') top center no-repeat transparent;
+                        width: 250px;
+                        height: 25px;
+                    }
                     
                     #wrapper #sidebar #copyright {
                         text-align: center;
-                        color: {color:Sidebar One};
+                        color: #fff;
                         font-size: 12px;
                         margin-bottom: 10px;
                     }
                     
                         #wrapper #sidebar #copyright a {
-                            color: {color:Sidebar One};
+                            color: #fff;
                             margin-left: 15px;
                         }
-
-#title img{
-max-width: 982px !important;
-}
-
-#customhtml {
-                    display:none;
-                    font-family: {font:Post Body} !important;
-                    background: url('{image:Post Background}') top left fixed repeat;
-                    color: {color:Post Body};
-                    margin: 0 0 10px 0;
-					padding: 10px;
-                    position: relative;
-					-moz-border-radius: {text:Corner Radius}px;
-                        -webkit-border-radius: {text:Corner Radius}px;
-                        border-radius: {text:Corner Radius}px;
-                }
-.page1 #customhtml{
-  display:block;
-}
-ul#likes {
-                list-style-type: none;
-                margin: 0 0 0 0;
-                padding: 0 0 0 0;
-            }
-
-                li.like_post {
-                    /* Should match the width specified in the Likes tag */
-                    width: 210px;
-                    margin: 0 0 20px 0;
-                    float: left;
-                }
-
-                  li.like_post img {
-                      max-width: 100%;
-                  }
-
-                  li.like_post blockquote {
-                      margin: 0;
-                      padding: 0 0 0 10px;
-                      border-left: 1px solid #eee;
-                  }
-
-                  li.like_post ol,
-                  li.like_post ul {
-                      
-                      padding: 0;
-                  }
-
-                  li.like_post .like_link a {
-                      color: {background};
-					  font-weight: bold;
-					  
-                  }
-
-                  li.like_post .like_title {
-                      color: {Post Title};
-					  font-weight: bold;
-                  }
-
-                  li.like_post .post_info_bottom {
-                     margin: 0 0 20px 0;
-                      display: block !important;
-                  }
-        /* Extra stuff */
-        
-#contents .post { margin: 0px; }
-		.post .copy, .post .body, .post a { color: {color:Post Body} !important; }
-        .post { font-family: {font:Post Body} !important; }
-        .post .title, .post .quote, .quotebg, .post .link a { color: {color:Post Title} !important; font-family: {font:Post Titles} !important; }
-        .post .link a { background-color: transparent !important; }
-        #title a { color: {color:Title} !important; font-family: {font:Title} !important; } 
-        #sidebar, #search, #search .query { color: {color:Sidebar One} !important; border-color: {color:Sidebar One} !important; font-family:{font:Sidebar} !important; }
-        .footer, .notecontainer { font-family: {font:post body} !important; }
-        .heading, #search .submit, a.page { background-color: {color:Sidebar One} !important; }
-        {block:IfCenterIcon}#wrapper #sidebar #top #avatar { left: 26px !important; }{/block:IfCenterIcon}
-        {block:IfHideFollowButton}#followontumblr { display: none !important; }{/block:IfHideFollowButton}
-        {block:IfHideAskAndSubmit}.ask_and_submit { display: none !important; }{/block:IfHideAskAndSubmit}
-        {block:IfHideMiscLinks}#buttons { display: none !important; }{/block:IfHideMiscLinks}
-        {block:IfHideSearch}#search, #search-scope { display: none !important; }{/block:IfHideSearch}
-        {block:IfHideCopyright}#copyright { display: none !important; }{/block:IfHideCopyright}
-        #sidebar #top { background-color: {color:Sidebar Background} !important; }
-        .post .footer, .footer .date, .footer .notes, .notecontainer { background-color: {block:IfTransparentPostFooter}transparent{/block:IfTransparentPostFooter}{block:IfNotTransparentPostFooter}{color:Post Footer}{/block:IfNotTransparentPostFooter} !important; }
-        .footer a, .notecontainer a { color: {color:Post Footer Text} !important; }
-        .post { background: {text:Post Background} !important; }
-        {block:IfTransparentPostBackground}#content .bottom { background-image: none !important; }{/block:IfTransparentPostBackground}
-        {block:IfTransparentSidebarBackground}#sidebar #top, #sidebar #bottom, #search-scope input { background-color: transparent !important; background-image: none !important; }{/block:IfTransparentSidebarBackground}
-        {block:IfNotTransparentSidebarBackground}#top:after { content: ' ';display: block;background: rgba(0,0,0,.4)};position: absolute;height: 10px;width: 250px;margin-left: -20px;border-bottom-left-radius: 24px;border-bottom-right-radius: 24px; }{/block:IfNotTransparentSidebarBackground}
-        {block:IfHideDateAndNotes}.date_notes { display: none !important; }{/block:IfHideDateAndNotes}
-        {block:IfHideTagsAndSource}.tags_source { display: none !important; }{/block:IfHideTagsAndSource}
-        {block:IfBackgroundImageCover}body { background-size: cover; }{/block:IfBackgroundImageCover}
-        {block:IfRoundPostCorners}.post { border-radius: {text:Corner Radius}px; }{/block:IfRoundPostCorners}
-        .post .chat .lines { margin-left: 0 !important; }
-        .post .chat { border-left: 0 solid transparent !important; }
-        .post .chat .lines .line { margin-bottom: 0 !important; }
-        .post .audio { background-color: transparent !important; }
     
-	</style>
+    </style>
     <!--[if lt IE 7.]>
         <style type="text/css">
-            
-
-
-#wrapper #sidebar #bottom {
+            #wrapper #sidebar #bottom {
                 background: transparent;
             }
             
             #wrapper #sidebar #top #avatar {
                 background: none;
             }
-
+            
             #wrapper #sidebar #top #avatar img {
                 border: 5px solid #f1f1f1;
             }
@@ -992,7 +815,6 @@ ul#likes {
                 display: none;
                 float: none;
             }
-			
         </style>
     <![endif]-->
     
@@ -1016,38 +838,21 @@ ul#likes {
                 padding: 0;
                 margin: 0;
             }
-#tumblr_lightbox {
-       max-width: {text:Wrapper Width} !important;
-	   max-height: auto !important;}
-	   </style>
+        </style>
     <![endif]-->
     <style type="text/css">{CustomCSS}</style>
 </head>
 <body>
     <div id="wrapper">
-        <center><div id="title">
+        <div id="title">
             <a href="/">
                 {block:IfHeaderImage}<img src="{image:Header}" />{/block:IfHeaderImage}
                 {block:IfNotHeaderImage}{Title}{/block:IfNotHeaderImage}
             </a>
-        </div></center>
+        </div>
         
         <div id="content">
-           
-		   {block:IndexPage}
-  <div id="index"
-    {block:SearchPage}style="display: none;"{/block:SearchPage}
-    {block:TagPage}style="display: none;"{/block:TagPage}>
-    
-	{block:IfCustomHTML}
-            <body class="page{CurrentPage}">
-  <div id="customhtml">
-               {text:Custom Html}    
-            </div></body>
-        {/block:IfCustomHTML}
-  </div>
-{/block:IndexPage}
-		
+            
             {block:SearchPage}
                 {block:SearchResults}
                     <div id="searchresults">{lang:SearchResultCount results for SearchQuery 2}</div>
@@ -1058,27 +863,14 @@ ul#likes {
                 {/block:NoSearchResults}
             {/block:SearchPage}
             
-			          
-			{block:Posts}
+            {block:Posts}
                 <div class="post">
                     
-                    {Block:Photo}
-    {LinkOpenTag}
-        <center><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></center>
-    {LinkCloseTag}
-
-    {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
-
-    
-{/block:Caption}
-{/Block:Photo}
-
-<center>{block:Photoset}
-{Photoset-700}
-{block:Caption}
-        {Caption}
-    {/block:Caption}
-{/block:Photoset}</center>                  
+                    {block:Photo}
+                        <div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</div>
+                        {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
+                    {/block:Photo}
+                    
                     {block:Video}
                         <div class="media">{Video-500}</div>
                         {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
@@ -1163,7 +955,7 @@ ul#likes {
                     
                     {block:Date}
                         <a href="{Permalink}">
-                            <div class="footer date_notes for_permalink">
+                            <div class="footer for_permalink">
                                 <div class="date">
                                     {block:Reblog}
                                         {lang:Reblogged TimeAgo from ReblogParentName} {block:RebloggedFromReblog}(<span style="text-transform:lowercase;">{lang:Originally from ReblogRootName}</span>){/block:RebloggedFromReblog}
@@ -1179,7 +971,7 @@ ul#likes {
                         </a>
                     {/block:Date}
                     
-                    <div class="footer tags_source {block:ContentSource}with_source_url{/block:ContentSource}" style="
+                    <div class="footer {block:ContentSource}with_source_url{/block:ContentSource}" style="
                         display:none;
                         {block:IfShowTags}{block:HasTags}display:block;{/block:HasTags}{/block:IfShowTags}
                         {block:ContentSource}display:block;{/block:ContentSource}
@@ -1213,13 +1005,8 @@ ul#likes {
                             </div>
                         {/block:Permalink}
                     {/block:IfDisqusShortname}
-                  <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"></div><a href="{ReblogURL}"><img alt="Reblog This!" src="http://static.tumblr.com/su4usjb/LUpmmg38z/reduxredux-reblog.png"></a><a href="{Permalink}"><img alt="This entry's link" src="http://static.tumblr.com/su4usjb/q4lmmg36z/reduxredux-link.png"></a>
-				  {block:ifShowTweetThis}
-				  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Teratoma">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
-{/block:ifShowTweetThis}                
-			
-</div>
+                    
+                </div>
                 <div class="bottom"></div>
             {/block:Posts}
             
@@ -1248,32 +1035,21 @@ ul#likes {
         
         <div id="sidebar">
             <div id="top">
-                <div id="avatar"><a href="/"><img src="{image:Avatar}" width="100%" /></a></div>
+                <div id="avatar"><a href="/"><img src="{PortraitURL-128}" /></a></div>
                 <div id="description">{Description}</div>
                 
                 <div id="pages" class="ask_and_submit">
                     {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
                     {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-                    <div class="clear"></div>{block:HasPages}
+                    <div class="clear"></div>
+                </div>
+                
+                {block:HasPages}
                     <div id="pages">
                         {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
                         <div class="clear"></div>
                     </div>
                 {/block:HasPages}
-                </div>
-                
-                <div id="buttons">
-                    <div class="row">
-                        <div class="button" id="button-rss"><a href="{RSS}">{lang:RSS feed}</a></div>
-                        <div class="button" id="button-random"><a href="/random">{lang:Random}</a></div>
-                    </div>
-                    <div class="clear"></div>
-                    <div class="row">
-                        <div class="button" id="button-archive"><a href="/archive">{lang:Archive}</a></div>
-                        <div class="button" id="button-mobile"><a href="/mobile">{lang:Mobile}</a></div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
                 
                 <div id="search">
                     <form action="/search" method="get" id="search-form">
@@ -1305,19 +1081,7 @@ ul#likes {
                     </script>
                 </div>
                 {/block:Twitter}
-                    {block:IfLikesInSidebar}
-    {block:Likes}
-            <div id="likes_container">
-                <h2>Likes</h2>
-
-                {Likes limit="5" summarize="1" width="210"}
-
-                <a href="http://www.tumblr.com/liked/by/{Name}">
-                    See more...
-                </a>
-            </div>
-        {/block:Likes}
-    {/block:IfLikesInSidebar}
+                
                 {block:IfShowPeopleIFollow}
                     {block:Following}
                         <div class="heading" id="following">{lang:Following}</div>
@@ -1327,15 +1091,24 @@ ul#likes {
                     {/block:Following}
                 {/block:IfShowPeopleIFollow}
                 
-                  <div id="bottom"></div>
-            <div id="copyright"><p>&copy; {CopyrightYears} <a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a><br><a href="http://reduxredux.teratoma.tk">
- <img src="http://static.tumblr.com/su4usjb/0tUmlrwrl/reduxredux-url.png"/>
-</a><br></div>
-        </div>
+                <div id="buttons">
+                    <div class="row">
+                        <div class="button" id="button-rss"><a href="{RSS}">{lang:RSS feed}</a></div>
+                        <div class="button" id="button-random"><a href="/random">{lang:Random}</a></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="row">
+                        <div class="button" id="button-archive"><a href="/archive">{lang:Archive}</a></div>
+                        <div class="button" id="button-mobile"><a href="/mobile">{lang:Mobile}</a></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
                 
             </div>
             
-          
+            <div id="bottom"></div>
+            <div id="copyright">&copy; {CopyrightYears} <a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a></div>
+        </div>
         
         <div class="clear"></div>
     </div>
