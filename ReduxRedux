@@ -1,43 +1,90 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
-                                         
-        .                                 .o8       oooo               
-      .o8                                "888       `888               
-    .o888oo oooo  oooo  ooo. .oo.  .oo.   888oooo.   888  oooo d8b     
-      888   `888  `888  `888P"Y88bP"Y88b  d88' `88b  888  `888""8P     
-      888    888   888   888   888   888  888   888  888   888        
-      888 .  888   888   888   888   888  888   888  888   888    .o. 
-      "888"  `V88V"V8P' o888o o888o o888o `Y8bod8P' o888o d888b   Y8P
+                            XXXX                            
+                             XXX                            
+  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXX  
+   XXX  XX    XXXX    XXXX   XXX  XXXX  XXXX     XXX XX     
+   XXX     XXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
+   XXX    XXXXXXXXXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
+  XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
+           XXXXXXXXX                XXXXXXXXX                
+               XX           XXXX                            
+                             XXX                            
+  XXXXXXXXX            XXXXXXXXX              XXXXXX  XXXX  
+   XXX  XX    XXXX    XXXX   XXX  XXXX  XXXX     XXX XX     
+   XXX     XXXX  XXX  XXXX   XXX   XXX   XXX      XXXXX     
+   XXX    XXXXXXXXXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
+  XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
+           XXXXXXXXX                XXXXXXXXX  by Teratoma.tk             
+               XX                                                            			 
 
--->
+Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from http://themes.edada.ms-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
     <!-- DEFAULT VARIABLES -->
-    <meta name="color:Background" content="#3b627e" />
-    
-    <meta name="font:Title" content="Arial" />
-    <meta name="font:Body" content="Arial" />
-    <meta name="font:Accent" content="Lucida Sans" />
-    
-    <meta name="if:Show People I Follow" content="1" />
-    <meta name="if:Show Tags" content="1" />
-    <meta name="if:Show Album Art on Audio Posts" content="1" />
-    <meta name="if:Enable Jump Pagination" content="0" />
-    
+    <meta name="text:Wrapper Width" content="982px" />
+	<meta name="text:Content Width" content="722px" />
+	<meta name="text:Corner Radius" content="5" />
+    <meta name="text:Custom HTML" content="Replace this with your own text or HTML" />
     <meta name="text:Disqus Shortname" content="" />
+	
+	<meta name="if:Show People I Follow" content="1" />
+    <meta name="if:Show Tags" content="1" />
+    <meta name="if:Show Tweet This" content="1" />
+    <meta name="if:Show Album Art on Audio Posts" content="1" />
+    <meta name="if:Likes in sidebar" content="1"/>
+    <meta name="if:Enable Jump Pagination" content="0" />
+    <meta name="if:Sidebar On Left" content="0" />
+    <meta name="if:Fixed sidebar" content="0"/>
     
-    <meta name="image:Header" content="" />
-    <meta name="image:Background" content="" />
+	<meta name="image:Avatar" content="http://static.tumblr.com/su4usjb/nxXmkhhi4/reduxredux-av.png" />
+	<meta name="image:Favicon" content="http://static.tumblr.com/su4usjb/RbCmk8dc8/reduxredux-ico.gif" />
+	<meta name="image:Header" content="http://static.tumblr.com/su4usjb/qGOmkhhhi/reduxredux-header.png" />
+	<meta name="image:Wrapper Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
+    <meta name="image:Sidebar Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
+	<meta name="image:Post Background" content="http://static.tumblr.com/su4usjb/HEAmloat2/wrapper-bg.png" />
+	<meta name="image:Background" content="http://static.tumblr.com/su4usjb/rPLmk8dg2/reduxredux-bg.png" />
     
+	<meta name="color:Title" content="#FFFFFF" />
+    <meta name="color:Link" content="#FFFFFF" />
+	<meta name="color:Post Title" content="#66ccff" />
+    <meta name="color:Post Body" content="#CCCCCC" />
+    <meta name="color:Sidebar One" content="#66ccff" />
+	<meta name="color:Sidebar Two" content="#ffffff" />
+	<meta name="color:Post Footer" content="#EAEAEA" />
+    <meta name="color:Post Footer Text" content="{color:Post Footer Text}" />
+    
+    
+	
+	<meta name="if:Hide Date And Notes" content="0" />
+    <meta name="if:Hide Tags And Source" content="0" />
+    <meta name="if:Hide Follow Button" content="0" />
+    <meta name="if:Hide Ask And Submit" content="0" />
+    <meta name="if:Hide Misc Links" content="0" />
+    <meta name="if:Hide Search" content="0" />
+    <meta name="if:Hide Copyright" content="0" />
+    
+	<meta name="font:Title" content="Arial" />
+    <meta name="font:Sidebar" content="Arial" />
+    <meta name="font:Post Titles" content="Arial" />
+    <meta name="font:Post Body" content="Arial" />
+        
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{Title}{block:SearchPage}, {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
     {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
-    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="shortcut icon" href="{image:Favicon}" />
     <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <style type="text/css">
-        body {
-            background: {color:Background} url('{image:Background}') top left fixed repeat;
+ 
+{block:ifFixedSidebar}#sidebar {position: fixed}{/block:ifFixedSidebar}
+ 
+ /* Standard Redux stuff */
+        body 
+		
+		{
+            background: {color:Link} url('{image:Background}') top left fixed repeat;
             margin: 0;
             padding: 0;
             font-family: {font:Body};
@@ -48,23 +95,30 @@
             height: 0px;
             overflow: hidden;
         }
-        
-        a img {
-            border: none;
-        }
+                a img {
+        max-width: 100%;    
+		max-height: auto !important;
+		border: none;
+        -moz-border-radius: {text:Corner Radius}px;
+                        -webkit-border-radius: {text:Corner Radius}px;
+                        border-radius: {text:Corner Radius}px;
+    					}
         
         #wrapper {
-            width: 845px;
+            width: {text:Wrapper Width};
             margin: 0 auto;
-        }
+		    padding: 10px;
+			background: url('{image:Wrapper Background}') {color:Wrapper Color} top left fixed repeat;
+		
+		}
         
             #wrapper #title {
-                margin: 30px 0;
-                color: #fff;
+                margin: 1px 0;
+                color: {color:Title};
                 font-size: 50px;
                 font-weight: bold;
                 font-family: {font:Title};
-                text-shadow: 1px 3px 5px rgba(0,0,0, 0.5);
+                text-shadow: 2px 3px 5px rgba(0,0,0, 0.5);
                 letter-spacing: -1px;
             }
             
@@ -74,26 +128,32 @@
                 }
             
             #wrapper #content {
-                width: 520px;
-                float: left;
+                width: {text:Content Width};
+                
+				float: {block:IfSidebarOnLeft}right{/block:IfSidebarOnLeft}{block:IfNotSidebarOnLeft}left{/block:IfNotSidebarOnLeft};
             }
             
                 #wrapper #content .post {
                     font-family: {font:Body};
-                    background: #fff;
-                    padding: 10px;
+                    background: url('{image:Post Background}') top left fixed repeat;
+                    color: {color:Post Body};
+                    margin: 1px;
+					padding: 10px;
                     position: relative;
+					-moz-border-radius: {text:Corner Radius}px;
+                        -webkit-border-radius: {text:Corner Radius}px;
+                        border-radius: {text:Corner Radius}px;
                 }
                     
                     #wrapper #content .post .media {
                         text-align: center;
-                        margin-bottom: 10px;
+                        margin-bottom: 0px;
                     }
                     
                     #wrapper #content .post .quotebg {
                         font-family: georgia, serif;
                         font-size: 150px;
-                        color: {color:Background};
+                        color: {color:Link};
                         opacity: 0.2;
                         filter: alpha(opacity=20);
                         -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
@@ -103,7 +163,7 @@
                     }
                     
                     #wrapper #content .post .quote {
-                        color: {color:Background};
+                        color: {color:Link};
                         font-weight: bold;
                         padding: 20px 20px 5px 20px;
                     }
@@ -152,12 +212,12 @@
                         }
                         
                         #wrapper #content .post .copy p {
-                            margin: 10px 0 0 0;
+                            margin: 5px 0 0 0;
                             padding: 0;
                         }
                         
                         #wrapper #content .post .copy pre {
-                            margin: 10px 0px 10px 0px;
+                            margin: 0px;
                             padding: 10px;
                             background-color: #e6e6e6;
                             font: normal 11px Courier, monospace;
@@ -169,14 +229,14 @@
                         }
                         
                         #wrapper #content .post .copy img {
-                            max-width: 100%;
+                            max-width: 712px;
                         }
                     
                     #wrapper #content .post .audio {
                         background: #eaeaea;
                         float: left;
                         padding: 7px;
-                        margin-bottom: 10px;
+                        margin-bottom: 0px;
                         -moz-border-radius: 4px;
                         -webkit-border-radius: 4px;
                         border-radius: 4px;
@@ -194,14 +254,14 @@
                             padding: 8px 13px;
                             height: 13px;
                             float: left;
-                            color: #666;
+                            color: {color:Post Footer Text};
                             font-family: {font:Accent};
                             font-size: 11px;
                             text-transform: lowercase;
                         }
                         
                             #wrapper #content .post .audio .meta a {
-                                color: #666;
+                                color: {color:Post Footer Text};
                                 text-decoration: none;
                             }
                     
@@ -217,7 +277,7 @@
                         -moz-border-radius: 8px;
                         -webkit-border-radius: 8px;
                         border-radius: 8px;
-                        margin: 0 0 15px 0;
+                        margin: 0;
                         padding: 15px 20px;
                         position: relative;
                     }
@@ -244,18 +304,18 @@
                         }
                     
                     #wrapper #content .post .title {
-                        color: #494949;
+                        color: {color:Post Title};
                         font-size: 16px;
                         font-weight: bold;
                         padding: 10px 10px 0 10px;
                     }
                     
                     #wrapper #content .post img {
-                      max-width: 500px;
+                      max-width: 712px%;
                     }
                                         
                     #wrapper #content .post .chat {
-                        background-color: #fff;
+                        
                         border-left: 5px solid #dedddd;
                         margin: 10px 10px 0 10px;
                         font-size: 14px;
@@ -266,14 +326,14 @@
                         }
                         
                             #wrapper #content .post .chat .lines .line {
-                                background-color: #eaeaea;
-                                color: #494949;
+                                background-color: rgba(255,255,255,0.2);
+                                color: #cccccc;
                                 margin-bottom: 1px;
                                 padding: 3px 5px;
                             }
                             
                             #wrapper #content .post .chat .lines .line.even {
-                                background-color: #dedddd;
+                                background-color: rgba(255,255,255,0.1);
                             }
                         
                         #wrapper #content .post .link {
@@ -283,7 +343,7 @@
                         }
                             
                             #wrapper #content .post .link a {
-                                background-color: {color:Background};
+                                background-color: {color:Link};
                                 color: #fff;
                                 padding: 5px 7px;
                                 -moz-border-radius: 4px;
@@ -298,15 +358,15 @@
                             }
                     
                     #wrapper #content .post .footer {
-                        background: #eaeaea;
+                     
                         -moz-border-radius: 4px;
                         -webkit-border-radius: 4px;
                         border-radius: 4px;
                         font-family: {font:Accent};
                         font-size: 11px;
-                        color: #666;
+                        color: {color:Post Footer Text};
                         padding: 5px 10px;
-                        margin-top: 10px;
+                        margin-top: 0px;
                     }
                         
                         #wrapper #content .post .footer.for_permalink:hover {
@@ -318,18 +378,18 @@
                         #wrapper #content .post .footer .date {
                             width: 67%;
                             float: left;
-                            color: #666;
+                            color: {color:Post Footer Text};
                         }
                         
                         #wrapper #content .post .footer .notes {
                             width: 33%;
                             float: right;
                             text-align: right;
-                            color: #666;
+                            color: {color:Post Footer Text};
                         }
                             
                             #wrapper #content .post .footer .notes a {
-                                color: #666;
+                                color: {color:Post Footer Text};
                             }
                             
                             #wrapper #content .post .footer .tags a {
@@ -371,7 +431,7 @@
                         }
                         
                             #wrapper #content .post .copy blockquote {
-                                margin: 10px 0px 10px 10px;
+                                margin: 0px;
                                 padding-left: 15px;
                                 border-left: solid 4px #dcdcdc;
                             }
@@ -397,9 +457,9 @@
                                                 }
                         
                         #wrapper #content .bottom {
-                            background: url('http://assets.tumblr.com/themes/redux/shadow-post.png') top center no-repeat transparent;
-                            width: 513px;
-                            height: 40px;
+                            background: none top center no-repeat transparent;
+                   
+                            height: 10px;
                             margin: 0 auto;
                         }
                         
@@ -410,8 +470,8 @@
                         }
                         
                             #wrapper #content #navigation a {
-                                background-color: #fff;
-                                color: {color:Background};
+                                background-color: rgba(0,0,0,0.2);
+                                color: #CCC;
                                 padding: 5px 10px;
                                 text-decoration: none;
                                 margin-left: 25px;
@@ -431,7 +491,7 @@
                             
                             #wrapper #content #navigation.jump_pagination .current_page {
                                 color: #fff;
-                                background-color: rgba(255,255,255, 0.1);
+                                background-color: rgba(255,255,255,0.1);
                                 border: 2px solid #fff;
                                 padding: 3px 8px;
                                 margin: 0 0 0 4px;
@@ -441,19 +501,19 @@
                             #wrapper #content #navigation.jump_pagination .jump_page {}
                             
                             #wrapper #content .post .notecontainer {
-                                background: #eaeaea;
+                                
                                 -moz-border-radius: 4px;
                                 -webkit-border-radius: 4px;
                                 border-radius: 4px;
                                 font-family: {font:Accent};
                                 font-size: 11px;
-                                color: #666;
-                                margin-top: 10px;
-                                margin-bottom: -10px;
+                                color: {color:Post Footer Text};
+                                margin-top: 0px;
+                                margin-bottom: 0px;
                             }
                             
                                     #wrapper #content .post .notecontainer a {
-                                        color: #666;
+                                        color: {color:Post Footer Text};
                                         text-decoration: underline;
                                     }
                                     
@@ -483,9 +543,9 @@
                                             }
                                             
                                             #wrapper #content .post .notecontainer ol.notes li.note blockquote {
-                                                border-left: 2px solid #666;
+                                                border-left: 2px solid {color:Post Footer Text};
                                                 padding: 4px 10px;
-                                                margin: 10px 0px 0px 25px;
+                                                margin: 5px;
                                             }
                                             
                                                 #wrapper #content .post .notecontainer ol.notes li.note blockquote a {
@@ -514,35 +574,54 @@
             
             #wrapper #sidebar {
                 width: 250px;
-                float: right;
-                color: {color:Background};
+                float: {block:IfSidebarOnLeft}left{/block:IfSidebarOnLeft}{block:IfNotSidebarOnLeft}right{/block:IfNotSidebarOnLeft};
+                
                 font-family: {font:Accent}
             }
             
                 #wrapper #sidebar a {
-                    color: {color:Background};
+                    color: {color:Link};
                 }
-                
+				a:link {
+color: {color:Link};
+}
+#linkbutton{
+                            display: block;
+                            float: left;
+                            background-color: {color:Link};
+                            color: #fff;
+                            padding: 4px 5px;
+                            margin: 0 5px 5px 0;
+                            -webkit-border-radius: 3px;
+                            -moz-border-radius: 3px;
+                            border-radius: 3px;
+                        }                
                 #wrapper #sidebar #top {
-                    background: #fff;
-                    padding: 0 20px;
+                    background: url('{image:Sidebar Background}') top left fixed repeat;
+                    padding: 20px 20px;
                     
-                    -webkit-border-top-left-radius: 10px;
-                    -webkit-border-top-right-radius: 10px;
-                    -moz-border-radius-topleft: 10px;
-                    -moz-border-radius-topright: 10px;
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
+                    -webkit-border-top-left-radius: {text:Corner Radius}px;
+                    -webkit-border-top-right-radius: {text:Corner Radius}px;
+                    -moz-border-radius-topleft: {text:Corner Radius}px;
+                    -moz-border-radius-topright: {text:Corner Radius}px;
+                    border-top-left-radius: {text:Corner Radius}px;
+                    border-top-right-radius: {text:Corner Radius}px;
+					-webkit-border-bottom-left-radius: {text:Corner Radius}px;
+                        -webkit-border-bottom-right-radius: {text:Corner Radius}px;
+                        -moz-border-radius-bottomleft: {text:Corner Radius}px;
+                        -moz-border-radius-bottomright: {text:Corner Radius}px;
+                        border-bottom-left-radius: {text:Corner Radius}px;
+                        border-bottom-right-radius: {text:Corner Radius}px;
                 }
                 
                     #wrapper #sidebar #top #avatar {
-                        width: 146px;
-                        height: 146px;
-                        padding: 8px 0 0 9px;
-                        background: url('http://assets.tumblr.com/themes/redux/avatar-bg.png') top left no-repeat transparent;
+                        width: 210px;
+                        height: auto !important;
+                        margin-bottom: 20px;
+                        
                         position: relative;
-                        top: -24px;
-                        left: -5px;
+                        
+                        
                     }
                     
                     #wrapper #sidebar #top #pages {
@@ -559,8 +638,8 @@
                         #wrapper #sidebar #top #pages a.page {
                             display: block;
                             float: left;
-                            background-color: {color:Background};
-                            color: #fff;
+                            background-color: {color:Link};
+                            color: {color:Sidebar Two};
                             padding: 4px 5px;
                             margin: 0 5px 5px 0;
                             -webkit-border-radius: 3px;
@@ -581,17 +660,17 @@
                     #wrapper #sidebar #top #description {
                         font-size: 11px;
                         position: relative;
-                        top: -18px;
+                        top: 0px;
                     }
                     
                         #wrapper #sidebar #top #description a {
-                            color: {color:Background};
+                            color: {color:Link};
                             text-decoration: underline;
                         }
                     
                     #wrapper #sidebar #top #search {
-                        background: #fff;
-                        border: 1px solid {color:Background};
+                        background: {color:Sidebar Two};
+                        border: 1px solid {color:Link};
                         
                         -moz-border-radius: 4px;
                         -webkit-border-radius: 4px;
@@ -620,12 +699,12 @@
                                 outline: none;
                                 width: 125px;
                                 float: left;
-                                color: {color:Background};
+                                color: {color:Link};
                             }
                             
                             #wrapper #sidebar #top #search form .submit {
-                                background: {color:Background};
-                                color: #fff;
+                                background: {color:Link};
+                                color: {color:Sidebar Two};
                                 border: none;
                                 padding: 5px 7px;
                                 margin: 3px 3px 2px 0;
@@ -643,12 +722,12 @@
                             }
                     
                     #wrapper #sidebar #top .heading {
-                        color: #fff;
+                        color: {color:Sidebar Two};
                         font-family: helvetica, arial, sans-serif;
                         font-size: 17px;
                         margin-top: 20px;
                         padding: 10px;
-                        background-color: {color:Background};
+                        background-color: {color:Link};
                         -webkit-border-top-left-radius: 4px;
                         -webkit-border-top-right-radius: 4px;
                         -moz-border-radius-topleft: 4px;
@@ -658,12 +737,12 @@
                     }
                     
                     #wrapper #sidebar #top a .heading {
-                        color: #fff;
+                        color: {color:Sidebar Two};
                         text-decoration: none;
                     }
                     
                     #wrapper #sidebar #top .heading#followontumblr {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-en_US.png') center left no-repeat {color:Background};
+                        background: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-en_US.png') center left no-repeat {color:Sidebar Two} !important;
                         text-indent: -9999px;
                         -moz-border-radius: 4px;
                         -webkit-border-radius: 4px;
@@ -694,25 +773,25 @@
                     }
                     
                     #wrapper #sidebar #top .heading#twitter {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-twitter.png') right center no-repeat {color:Background};
+                        background: url('http://assets.tumblr.com/themes/redux/sidebar-twitter.png') right center no-repeat {color:Link};
                     }
                     
                     #wrapper #sidebar #top .heading#following {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-following.png') right center no-repeat {color:Background};
+                        background: url('http://assets.tumblr.com/themes/redux/sidebar-following.png') right center no-repeat;
                     }
                     
                     #wrapper #sidebar #top .content {
                         margin-top: 2px;
                         padding: 7px 10px;
-                        background: #eaeaea;
-                        color: #666;
+                        
+                        color: {color:Post Footer Text};
                         font-size: 11px;
                         overflow: hidden;
                     }
                     
                         #wrapper #sidebar #top a {
                             text-decoration: none;
-                        }
+                        color: #CCC;}
                     
                         #wrapper #sidebar #top #following-avatars.content {
                             padding: 4px;
@@ -727,7 +806,8 @@
                         }
                         
                             #wrapper #sidebar #top #buttons .button {
-                                width: 35%;
+                                
+								width: 35%;
                                 height: 21px;
                                 float: left;
                                 background: left center no-repeat transparent;
@@ -736,7 +816,7 @@
                             }
                             
                                 #wrapper #sidebar #top #buttons a {
-                                    color: {color:Background};
+                                    color: {color:Sidebar One};
                                     text-decoration: none;
                                 }
                             
@@ -762,34 +842,139 @@
                             }
                 
                     #wrapper #sidebar #bottom {
-                        background: url('http://assets.tumblr.com/themes/redux/sidebar-bottom.png') top center no-repeat transparent;
-                        width: 250px;
-                        height: 25px;
-                    }
+                        background: none top left fixed repeat;
+                        
+                        -webkit-border-bottom-left-radius: {text:Corner Radius}px;
+                        -webkit-border-bottom-right-radius: {text:Corner Radius}px;
+                        -moz-border-radius-bottomleft: 10px;
+                        -moz-border-radius-bottomright: 10px;
+                        border-bottom-left-radius: {text:Corner Radius}px;
+                        border-bottom-right-radius: {text:Corner Radius}px;
+						}
                     
                     #wrapper #sidebar #copyright {
                         text-align: center;
-                        color: #fff;
+                        color: {color:Sidebar One};
                         font-size: 12px;
-                        margin-bottom: 10px;
+                        
                     }
                     
                         #wrapper #sidebar #copyright a {
-                            color: #fff;
+                            color: {color:Sidebar One};
                             margin-left: 15px;
                         }
-    
-    </style>
+
+#title img{
+max-width: 982px !important;
+}
+
+#customhtml {
+                    display:none;
+                    font-family: {font:Post Body} !important;
+                    background: url('{image:Post Background}') top left fixed repeat;
+                    color: {color:Post Body};
+                    margin: 0 0 10px 0;
+					padding: 10px;
+                    position: relative;
+					-moz-border-radius: {text:Corner Radius}px;
+                        -webkit-border-radius: {text:Corner Radius}px;
+                        border-radius: {text:Corner Radius}px;
+                }
+.page1 #customhtml{
+  display:block;
+}
+ul#likes {
+                list-style-type: none;
+                margin: 0 0 0 0;
+                padding: 0 0 0 0;
+            }
+
+                li.like_post {
+                    /* Should match the width specified in the Likes tag */
+                    width: 210px;
+                    margin: 0 0 20px 0;
+                    float: left;
+                }
+
+                  li.like_post img {
+                      max-width: 100%;
+                  }
+
+                  li.like_post blockquote {
+                      margin: 0;
+                      padding: 0 0 0 10px;
+                      border-left: 1px solid #eee;
+                  }
+
+                  li.like_post ol,
+                  li.like_post ul {
+                      
+                      padding: 0;
+                  }
+
+                  li.like_post .like_link a {
+                      color: {background};
+					  font-weight: bold;
+					  
+                  }
+
+                  li.like_post .like_title {
+                      color: {Post Title};
+					  font-weight: bold;
+                  }
+
+                  li.like_post .post_info_bottom {
+                     margin: 0 0 20px 0;
+                      display: block !important;
+                  }
+        /* Extra stuff */
+        
+#contents .post { margin: 0px; }
+		.post .copy, .post .body, .post a { color: {color:Post Body} !important; }
+        .post { font-family: {font:Post Body} !important; }
+        .post .title, .post .quote, .quotebg, .post .link a { color: {color:Post Title} !important; font-family: {font:Post Titles} !important; }
+        .post .link a { background-color: transparent !important; }
+        #title a { color: {color:Title} !important; font-family: {font:Title} !important; } 
+        #sidebar, #search, #search .query { color: {color:Sidebar One} !important; border-color: {color:Sidebar One} !important; font-family:{font:Sidebar} !important; }
+        .footer, .notecontainer { font-family: {font:post body} !important; }
+        .heading, #search .submit, a.page { background-color: {color:Sidebar One} !important; }
+        {block:IfCenterIcon}#wrapper #sidebar #top #avatar { left: 26px !important; }{/block:IfCenterIcon}
+        {block:IfHideFollowButton}#followontumblr { display: none !important; }{/block:IfHideFollowButton}
+        {block:IfHideAskAndSubmit}.ask_and_submit { display: none !important; }{/block:IfHideAskAndSubmit}
+        {block:IfHideMiscLinks}#buttons { display: none !important; }{/block:IfHideMiscLinks}
+        {block:IfHideSearch}#search, #search-scope { display: none !important; }{/block:IfHideSearch}
+        {block:IfHideCopyright}#copyright { display: none !important; }{/block:IfHideCopyright}
+        #sidebar #top { background-color: {color:Sidebar Background} !important; }
+        .post .footer, .footer .date, .footer .notes, .notecontainer { background-color: {block:IfTransparentPostFooter}transparent{/block:IfTransparentPostFooter}{block:IfNotTransparentPostFooter}{color:Post Footer}{/block:IfNotTransparentPostFooter} !important; }
+        .footer a, .notecontainer a { color: {color:Post Footer Text} !important; }
+        .post { background: {text:Post Background} !important; }
+        {block:IfTransparentPostBackground}#content .bottom { background-image: none !important; }{/block:IfTransparentPostBackground}
+        {block:IfTransparentSidebarBackground}#sidebar #top, #sidebar #bottom, #search-scope input { background-color: transparent !important; background-image: none !important; }{/block:IfTransparentSidebarBackground}
+        {block:IfNotTransparentSidebarBackground}#top:after { content: ' ';display: block;background: rgba(0,0,0,.4)};position: absolute;height: 10px;width: 250px;margin-left: -20px;border-bottom-left-radius: 24px;border-bottom-right-radius: 24px; }{/block:IfNotTransparentSidebarBackground}
+        {block:IfHideDateAndNotes}.date_notes { display: none !important; }{/block:IfHideDateAndNotes}
+        {block:IfHideTagsAndSource}.tags_source { display: none !important; }{/block:IfHideTagsAndSource}
+        {block:IfBackgroundImageCover}body { background-size: cover; }{/block:IfBackgroundImageCover}
+        {block:IfRoundPostCorners}.post { border-radius: {text:Corner Radius}px; }{/block:IfRoundPostCorners}
+        .post .chat .lines { margin-left: 0 !important; }
+        .post .chat { border-left: 0 solid transparent !important; }
+        .post .chat .lines .line { margin-bottom: 0 !important; }
+        .post .audio { background-color: transparent !important; }
+
+ 
+	</style>
     <!--[if lt IE 7.]>
         <style type="text/css">
-            #wrapper #sidebar #bottom {
+            
+
+
+#wrapper #sidebar #bottom {
                 background: transparent;
             }
             
             #wrapper #sidebar #top #avatar {
                 background: none;
             }
-            
+
             #wrapper #sidebar #top #avatar img {
                 border: 5px solid #f1f1f1;
             }
@@ -815,6 +1000,7 @@
                 display: none;
                 float: none;
             }
+			
         </style>
     <![endif]-->
     
@@ -838,21 +1024,41 @@
                 padding: 0;
                 margin: 0;
             }
-        </style>
+#tumblr_lightbox {
+       max-width: {text:Wrapper Width} !important;
+	   max-height: auto !important;}
+	   </style>
     <![endif]-->
     <style type="text/css">{CustomCSS}</style>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="title">
+
+
+
+   <div id="wrapper">
+        <center><div id="title">
             <a href="/">
                 {block:IfHeaderImage}<img src="{image:Header}" />{/block:IfHeaderImage}
                 {block:IfNotHeaderImage}{Title}{/block:IfNotHeaderImage}
             </a>
-        </div>
+        </div></center>
         
         <div id="content">
-            
+           
+		   {block:IndexPage}
+  <div id="index"
+    {block:SearchPage}style="display: none;"{/block:SearchPage}
+    {block:TagPage}style="display: none;"{/block:TagPage}>
+    
+	{block:IfCustomHTML}
+            <body class="page{CurrentPage}">
+  <div id="customhtml">
+               {text:Custom Html}    
+            </div></body>
+        {/block:IfCustomHTML}
+  </div>
+{/block:IndexPage}
+		
             {block:SearchPage}
                 {block:SearchResults}
                     <div id="searchresults">{lang:SearchResultCount results for SearchQuery 2}</div>
@@ -863,14 +1069,27 @@
                 {/block:NoSearchResults}
             {/block:SearchPage}
             
-            {block:Posts}
+			          
+			{block:Posts}
                 <div class="post">
                     
-                    {block:Photo}
-                        <div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</div>
-                        {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
-                    {/block:Photo}
-                    
+                    {Block:Photo}
+    {LinkOpenTag}
+        <center><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></center>
+    {LinkCloseTag}
+
+    {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
+
+    
+{/block:Caption}
+{/Block:Photo}
+
+<center>{block:Photoset}
+{Photoset-700}
+{block:Caption}
+        {Caption}
+    {/block:Caption}
+{/block:Photoset}</center>                  
                     {block:Video}
                         <div class="media">{Video-500}</div>
                         {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
@@ -955,7 +1174,7 @@
                     
                     {block:Date}
                         <a href="{Permalink}">
-                            <div class="footer for_permalink">
+                            <div class="footer date_notes for_permalink">
                                 <div class="date">
                                     {block:Reblog}
                                         {lang:Reblogged TimeAgo from ReblogParentName} {block:RebloggedFromReblog}(<span style="text-transform:lowercase;">{lang:Originally from ReblogRootName}</span>){/block:RebloggedFromReblog}
@@ -971,7 +1190,7 @@
                         </a>
                     {/block:Date}
                     
-                    <div class="footer {block:ContentSource}with_source_url{/block:ContentSource}" style="
+                    <div class="footer tags_source {block:ContentSource}with_source_url{/block:ContentSource}" style="
                         display:none;
                         {block:IfShowTags}{block:HasTags}display:block;{/block:HasTags}{/block:IfShowTags}
                         {block:ContentSource}display:block;{/block:ContentSource}
@@ -1005,8 +1224,13 @@
                             </div>
                         {/block:Permalink}
                     {/block:IfDisqusShortname}
-                    
-                </div>
+                  <a href="{ReblogURL}"><img alt="Reblog This!" src="http://static.tumblr.com/su4usjb/LUpmmg38z/reduxredux-reblog.png"></a><a href="{Permalink}"><img alt="This entry's link" src="http://static.tumblr.com/su4usjb/q4lmmg36z/reduxredux-link.png"></a>
+				  {block:ifShowTweetThis}
+				  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Teratoma">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
+{/block:ifShowTweetThis}                
+			
+</div>
                 <div class="bottom"></div>
             {/block:Posts}
             
@@ -1034,22 +1258,36 @@
         </div>
         
         <div id="sidebar">
-            <div id="top">
-                <div id="avatar"><a href="/"><img src="{PortraitURL-128}" /></a></div>
+            
+			<div id="top">
+                {block:IfAvatarImage}
+				<div id="avatar"><a href="/"><img src="{image:Avatar}" width="100%" /></a></div>
+				{/block:IfAvatarImage}
                 <div id="description">{Description}</div>
                 
                 <div id="pages" class="ask_and_submit">
                     {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
                     {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-                    <div class="clear"></div>
-                </div>
-                
-                {block:HasPages}
+                    <div class="clear"></div>{block:HasPages}
                     <div id="pages">
                         {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
                         <div class="clear"></div>
                     </div>
                 {/block:HasPages}
+                </div>
+                
+                <div id="buttons">
+                    <div class="row">
+                        <div class="button" id="button-rss"><a href="{RSS}">{lang:RSS feed}</a></div>
+                        <div class="button" id="button-random"><a href="/random">{lang:Random}</a></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="row">
+                        <div class="button" id="button-archive"><a href="/archive">{lang:Archive}</a></div>
+                        <div class="button" id="button-mobile"><a href="/mobile">{lang:Mobile}</a></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
                 
                 <div id="search">
                     <form action="/search" method="get" id="search-form">
@@ -1081,7 +1319,19 @@
                     </script>
                 </div>
                 {/block:Twitter}
-                
+                    {block:IfLikesInSidebar}
+    {block:Likes}
+            <div id="likes_container">
+                <h2>Likes</h2>
+
+                {Likes limit="5" summarize="1" width="210"}
+
+                <a href="http://www.tumblr.com/liked/by/{Name}">
+                    See more...
+                </a>
+            </div>
+        {/block:Likes}
+    {/block:IfLikesInSidebar}
                 {block:IfShowPeopleIFollow}
                     {block:Following}
                         <div class="heading" id="following">{lang:Following}</div>
@@ -1091,24 +1341,15 @@
                     {/block:Following}
                 {/block:IfShowPeopleIFollow}
                 
-                <div id="buttons">
-                    <div class="row">
-                        <div class="button" id="button-rss"><a href="{RSS}">{lang:RSS feed}</a></div>
-                        <div class="button" id="button-random"><a href="/random">{lang:Random}</a></div>
-                    </div>
-                    <div class="clear"></div>
-                    <div class="row">
-                        <div class="button" id="button-archive"><a href="/archive">{lang:Archive}</a></div>
-                        <div class="button" id="button-mobile"><a href="/mobile">{lang:Mobile}</a></div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
+                  <div id="bottom"></div>
+            <div id="copyright"><p>&copy; {CopyrightYears} <a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a><br><a href="http://reduxredux.teratoma.tk">
+ <img src="http://static.tumblr.com/su4usjb/0tUmlrwrl/reduxredux-url.png"/>
+</a></div>
+        </div>
                 
             </div>
             
-            <div id="bottom"></div>
-            <div id="copyright">&copy; {CopyrightYears} <a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a></div>
-        </div>
+          
         
         <div class="clear"></div>
     </div>
