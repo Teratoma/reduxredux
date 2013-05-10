@@ -16,7 +16,7 @@
    XXX    XXXXXXXXXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
   XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
            XXXXXXXXX                XXXXXXXXX  by Teratoma.tk             
-               XX                                                            			 
+               XX                   				 
 
 Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from http://themes.edada.ms-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -47,6 +47,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
 	<meta name="image:Background" content="http://static.tumblr.com/su4usjb/rPLmk8dg2/reduxredux-bg.png" />
     
 	<meta name="color:Title" content="#FFFFFF" />
+	<meta name="color:Background" content="#FFFFFF" />
     <meta name="color:Link" content="#FFFFFF" />
 	<meta name="color:Post Title" content="#66ccff" />
     <meta name="color:Post Body" content="#CCCCCC" />
@@ -84,7 +85,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
         body 
 		
 		{
-            background: {color:Link} url('{image:Background}') top left fixed repeat;
+            background: {color:Background} url('{image:Background}') top left fixed repeat;
             margin: 0;
             padding: 0;
             font-family: {font:Body};
@@ -207,7 +208,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                     }
                         
                         #wrapper #content .post .copy a {
-                            color: #6e7173;
+                            color: {color:Link};
                             text-decoration: underline;
                         }
                         
@@ -393,7 +394,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                             }
                             
                             #wrapper #content .post .footer .tags a {
-                                color: #4a4a51;
+                                color: {color:Link};
                                 text-decoration: underline;
                             }
                             
@@ -513,7 +514,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                             }
                             
                                     #wrapper #content .post .notecontainer a {
-                                        color: {color:Post Footer Text};
+                                        color: {color:Link};
                                         text-decoration: underline;
                                     }
                                     
@@ -865,7 +866,7 @@ color: {color:Link};
                         }
 
 #title img{
-max-width: 982px !important;
+max-width: {text:Wrapper Width} !important;
 }
 
 #customhtml {
@@ -930,7 +931,7 @@ ul#likes {
         /* Extra stuff */
         
 #contents .post { margin: 0px; }
-		.post .copy, .post .body, .post a { color: {color:Post Body} !important; }
+		.post .copy, .post .body, .post a { color: {color:Post Body}; }
         .post { font-family: {font:Post Body} !important; }
         .post .title, .post .quote, .quotebg, .post .link a { color: {color:Post Title} !important; font-family: {font:Post Titles} !important; }
         .post .link a { background-color: transparent !important; }
