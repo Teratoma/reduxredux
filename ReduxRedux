@@ -19,7 +19,7 @@
                XX                   				 
 
 Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com and Redux Edit, from http://themes.edada.ms-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="en" lang="en">
 
 <head>
     <!-- DEFAULT VARIABLES -->
@@ -32,6 +32,8 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
 	<meta name="if:Show People I Follow" content="1" />
     <meta name="if:Show Tags" content="1" />
     <meta name="if:Show Tweet This" content="1" />
+	<meta name="if:Show Pin This" content="1" />
+	<meta name="if:Show Like On Facebook" content="1" />
     <meta name="if:Show Album Art on Audio Posts" content="1" />
     <meta name="if:Likes in sidebar" content="1"/>
     <meta name="if:Enable Jump Pagination" content="0" />
@@ -72,7 +74,28 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
     <meta name="font:Post Body" content="Arial" />
         
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>{Title}{block:SearchPage}, {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
+    
+	<!-- START For Facebook Open Graph -->
+{block:PostSummary}
+<meta property="og:title" content="{PostSummary} - {Name}" />
+{/block:PostSummary}
+<meta property="og:url" content="{Permalink}" />
+<meta property="og:type" content="article" />
+{block:Posts}
+{block:Photo}<meta property="og:image" content="{PhotoURL-250}" />    {/block:Photo}
+{block:Text}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Text}
+{block:Photoset}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Photoset}
+{block:Quote}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Quote}
+{block:Link}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Link}
+{block:Chat}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Chat}
+{block:Audio}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Audio}
+{block:Video}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Video}
+{block:Answer}<meta property="og:image" content="{PortraitURL-128}" /> {/block:Answer}
+{/block:Posts}
+<meta property="og:description" content="{MetaDescription}" />
+<!-- For Facebook Open Graph END -->
+	
+	<title>{Title}{block:SearchPage}, {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
     {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
     <link rel="shortcut icon" href="{image:Favicon}" />
     <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
@@ -961,7 +984,7 @@ ul#likes {
         .post .chat .lines .line { margin-bottom: 0 !important; }
         .post .audio { background-color: transparent !important; }
 
- 
+
 	</style>
     <!--[if lt IE 7.]>
         <style type="text/css">
@@ -1001,6 +1024,7 @@ ul#likes {
                 display: none;
                 float: none;
             }
+
 			
         </style>
     <![endif]-->
@@ -1028,9 +1052,16 @@ ul#likes {
 #tumblr_lightbox {
        max-width: {text:Wrapper Width} !important;
 	   max-height: auto !important;}
+.like_reblog > div {
+max-height: 20px !important;
+float: left;
+}
 	   </style>
     <![endif]-->
     <style type="text/css">{CustomCSS}</style>
+
+
+	
 </head>
 <body>
 
@@ -1085,12 +1116,12 @@ ul#likes {
 {/block:Caption}
 {/Block:Photo}
 
-<center>{block:Photoset}
-{Photoset-700}
+{block:Photoset}
+<center>{Photoset-700}</center>
 {block:Caption}
         {Caption}
     {/block:Caption}
-{/block:Photoset}</center>                  
+{/block:Photoset}                  
                     {block:Video}
                         <div class="media">{Video-500}</div>
                         {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
@@ -1225,11 +1256,28 @@ ul#likes {
                             </div>
                         {/block:Permalink}
                     {/block:IfDisqusShortname}
-                  <a href="{ReblogURL}"><img alt="Reblog This!" src="http://static.tumblr.com/su4usjb/LUpmmg38z/reduxredux-reblog.png"></a><a href="{Permalink}"><img alt="This entry's link" src="http://static.tumblr.com/su4usjb/q4lmmg36z/reduxredux-link.png"></a>
-				  {block:ifShowTweetThis}
-				  <a href="https://twitter.com/share" class="twitter-share-button" data-via="Teratoma">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
-{/block:ifShowTweetThis}                
+                  
+<div>
+    <div style="display: inline-block;">{LikeButton}</div>
+    <div style="display: inline-block;">{ReblogButton}</div>
+	<div style="display: inline-block;"><a href="{Permalink}"><img alt="This entry's link" src="http://static.tumblr.com/umi0keo/Thymmm29c/reduxredux-link.png"></a></div>
+	{block:ifShowPinThis}<div style="display: inline-block;"><a href="http://pinterest.com/pin/create/button/?url={URLEncodedPermalink}&media={URLEncodedPhotoURL-500}" class="pin-it-button" count-layout="horizontal">
+    <img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" />
+   </a></div>{/block:ifShowPinThis}
+	{block:ifShowTweetThis}<div style="display: inline-block;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="{ShortURL}" data-count="none" data-dnt="true">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>{/block:ifShowTweetThis}
+    {block:ifShowLikeOnFacebook}<div style="display: inline-block;">
+
+<script>(function(d){
+  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+  js = d.createElement('script'); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=236186013100076&xfbml=1";
+  d.getElementsByTagName('head')[0].appendChild(js);
+}(document));</script>
+<div class="fb-like" data-href="{permalink}" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div></div>{block:ifShowLikeOnFacebook}
+</div>
+				  
+                             
 			
 </div>
                 <div class="bottom"></div>
