@@ -227,7 +227,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         }
                         
                     #wrapper #content .post .copy {
-                        color: #6e7173;
+                        color: {color:Post Body};
                         padding: 10px;
                         font-size: 13px;
                         line-height: 15px;
@@ -312,7 +312,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                         #wrapper #content .post .question .nipple {
                             width: 13px;
                             height: 7px;
-                            background: #f1f1f1 url('http://assets.tumblr.com/themes/redux/ask-mask.png');
+                            background: url('http://static.tumblr.com/umi0keo/dyNmmo4wm/ask-mask.png');
                             position: absolute;
                             bottom: -7px;
                             left: 30px;
@@ -323,7 +323,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                     }
                     
                         #wrapper #content .post .asker_container img {
-                            margin: 0 12px -7px 0;
+                            margin: 12px 12px -7px 0;
                         }
                         
                         #wrapper #content .post .asker_container a.asker {
@@ -453,7 +453,7 @@ Based on the Tumblr themes Redux, originally created by http://jacob.tumblr.com 
                                 }
                         
                         #wrapper #content .post a {
-                            color: #6e7173;
+                            color: {color:Post Body};
                             text-decoration: none;
                         }
                         
@@ -652,7 +652,7 @@ color: {color:Link};
                     }
                     
                     #wrapper #sidebar #top #pages {
-                        margin-bottom: 15px;
+                        margin-bottom: 10px;
                         font-size: 12px;
                     }
                     
@@ -688,6 +688,7 @@ color: {color:Link};
                         font-size: 11px;
                         position: relative;
                         top: 0px;
+						margin: 0 0 20px 0;
                     }
                     
                         #wrapper #sidebar #top #description a {
@@ -829,7 +830,7 @@ color: {color:Link};
                                 }
                                 
                         #wrapper #sidebar #top #buttons {
-                            padding: 20px 0 0 0;
+                            padding: 5px 0 0 0;
                         }
                         
                             #wrapper #sidebar #top #buttons .button {
@@ -1083,16 +1084,17 @@ float: left;
     {block:SearchPage}style="display: none;"{/block:SearchPage}
     {block:TagPage}style="display: none;"{/block:TagPage}>
     
-	
-  </div>
-{/block:IndexPage}
-
 {block:IfCustomHTML}
             <body class="page{CurrentPage}">
   <div id="customhtml">
                {text:Custom Html}    
             </div></body>
         {/block:IfCustomHTML}
+		
+  </div>
+{/block:IndexPage}
+
+
 		
             {block:SearchPage}
                 {block:SearchResults}
@@ -1321,11 +1323,11 @@ float: left;
                 <div id="pages" class="ask_and_submit">
                     {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
                     {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-                    <div class="clear"></div>{block:HasPages}
-                    <div id="pages">
+                    {block:HasPages}
+                    
                         {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
                         <div class="clear"></div>
-                    </div>
+                    
                 {/block:HasPages}
                 </div>
                 
