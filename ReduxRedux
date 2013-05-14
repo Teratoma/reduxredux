@@ -19,6 +19,7 @@
                XX                   				 
 
 Based on Redux, originally created by http://jacob.tumblr.com-->
+
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="en" lang="en">
 
 <head>
@@ -652,14 +653,13 @@ color: {color:Link};
                     }
                     
                     #wrapper #sidebar #top #pages {
-                        margin: 0 0 10px 0;
+                        margin-bottom: 10px;
                         font-size: 12px;
                     }
                     
                         #wrapper #sidebar #top #pages.ask_and_submit {
                             display: none;
-                            margin-bottom: 10px;
-							{block:AskEnabled}display: block;{/block:AskEnabled}
+                            {block:AskEnabled}display: block;{/block:AskEnabled}
                             {block:SubmissionsEnabled}display: block;{/block:SubmissionsEnabled}
                         }
                     
@@ -776,7 +776,7 @@ color: {color:Link};
                         -moz-border-radius: 4px;
                         -webkit-border-radius: 4px;
                         border-radius: 4px;
-                        margin-top: 40px;
+                        
                         {block:German}
                             background-image: url('http://assets.tumblr.com/themes/redux/sidebar-follow-on-de_DE.png');
                         {/block:German}
@@ -898,7 +898,7 @@ max-width: {text:Wrapper Width} !important;
 }
 
 #customhtml {
-                    display:none !important;
+                    display:none;
                     font-family: {font:Post Body} !important;
                     background: url('{image:Post Background}') top left fixed repeat;
                     color: {color:Post Body};
@@ -1080,7 +1080,7 @@ float: left;
         
         <div id="content">
            
-{block:IndexPage}
+		   {block:IndexPage}
   <div id="index"
     {block:SearchPage}style="display: none;"{/block:SearchPage}
     {block:TagPage}style="display: none;"{/block:TagPage}>
@@ -1322,14 +1322,14 @@ float: left;
                 <div id="description">{Description}</div>
                 
                 <div id="pages" class="ask_and_submit">
+                    {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
+                    {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
                     {block:HasPages}
                     
                         {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
                         <div class="clear"></div>
                     
-                {/block:HasPages}{block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
-                    {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-                    
+                {/block:HasPages}
                 </div>
                 
                 <div id="buttons">
