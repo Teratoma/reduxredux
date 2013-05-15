@@ -16,7 +16,7 @@
    XXX    XXXXXXXXXXX XXXX   XXX   XXX   XXX    XXX  XXXX   
   XXXXX   XXXXX         XXXX XXXX  XXX   XXX  XXXXX  XXXXXX 
            XXXXXXXXX                XXXXXXXXX  by Teratoma.tk             
-               XX                   				 
+               XX                       			 
 
 Based on Redux, originally created by http://jacob.tumblr.com-->
 
@@ -1081,19 +1081,20 @@ float: left;
         <div id="content">
            
 		   {block:IndexPage}
-  <div id="index"
+ {block:IfCustomHTML} <div id="index"
     {block:SearchPage}style="display: none;"{/block:SearchPage}
     {block:TagPage}style="display: none;"{/block:TagPage}>
     
-{block:IfCustomHTML}
-            <body class="page{CurrentPage}">
+
+            <div class="page{CurrentPage}">
   <div id="customhtml">
                {text:Custom Html}    
-            </div></body>
-        {/block:IfCustomHTML}
+            </div></div>
+        
 		
   </div>
-{/block:IndexPage}
+{/block:IfCustomHTML}
+  {/block:IndexPage}
 
 
 		
