@@ -10,7 +10,7 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com
 					<tr>
 						<td colspan="2" style="vertical-align: top; height: 360px;">
 							<br />
-							<img alt="" src="http://dl.dropbox.com/s/l1t4v55sohzj36s/splash.png" style="width: 700px; height: 330px; margin: 0px;" /></td>
+							<a href="http://dl.dropbox.com/s/l1t4v55sohzj36s/splash.png"><img alt="Click for full-size image..." src="http://dl.dropbox.com/s/l1t4v55sohzj36s/splash.png" style="width: 700px; height: 330px; margin: 0px;" /></a></td>
 					</tr>
 					<tr>
 						<td style="vertical-align: top; width: 350px; text-align: center;">
@@ -64,7 +64,11 @@ Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com
 						<td style="vertical-align: middle;">
 							<ul>
 								<li>
-									Customize your blog with uploadable images! Use transparent backgrounds!</li>
+									Customize your blog with uploadable images!</li>
+								<li>
+									The default background for the wrapper, content and sidebars is a single black pixel with 50% transparency, which creates several different shades when they overlap.</li>
+								<li>
+									Get creative with tones, transparencies and fades! Many different looks can be acheived with Redux Redux!</li>
 							</ul>
 						</td>
 						<td style="width: 400px; vertical-align: top; text-align: center;">
