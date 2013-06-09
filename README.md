@@ -2,7 +2,7 @@ Redux Redux
 
 by Teratoma
 
-Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com and "Redux Edit", from themes.edada.ms
+Based on the Tumblr theme Redux, originally created by http://jacob.tumblr.com
 
 <center>
 			<table border="0" cellpadding="1" cellspacing="1" style="width: 700px;">
