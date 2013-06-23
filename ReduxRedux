@@ -102,7 +102,9 @@ Based on Redux, originally created by http://jacob.tumblr.com-->
 	<meta name="text:Content Width" content="722px" />
 	<meta name="text:Corner Radius" content="5" />
     <meta name="text:Custom HTML" content="Replace this with your own text or HTML" />
-    <meta name="text:Disqus Shortname" content="" />
+    <meta name="text:Header HTML" content="Replace this with your own text or HTML" />
+	<meta name="text:Sidebar HTML" content="Replace this with your own text or HTML" />
+	<meta name="text:Disqus Shortname" content="" />
 	
 	<meta name="if:Show People I Follow" content="1" />
     <meta name="if:Show Tags" content="1" />
@@ -113,7 +115,8 @@ Based on Redux, originally created by http://jacob.tumblr.com-->
     <meta name="if:Show Album Art on Audio Posts" content="1" />
     <meta name="if:Likes in sidebar" content="1"/>
     <meta name="if:Enable Jump Pagination" content="0" />
-    <meta name="if:Sidebar On Left" content="0" />
+    <meta name="if:No Sidebar" content="0" />
+	<meta name="if:Sidebar On Left" content="0" />
     
     
 	<meta name="color:Title" content="#FFFFFF" />
@@ -141,7 +144,7 @@ Based on Redux, originally created by http://jacob.tumblr.com-->
     <meta name="if:Hide Misc Links" content="0" />
     <meta name="if:Hide Search" content="0" />
     <meta name="if:Hide Copyright" content="0" />
-    
+    <meta name="if:Show Links in Header" content="0" />
 	<meta name="font:Title" content="2084" />
     <meta name="font:Sidebar" content="Arial" />
     <meta name="font:Post Titles" content="Arial" />
@@ -176,7 +179,14 @@ Based on Redux, originally created by http://jacob.tumblr.com-->
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <style type="text/css">
  
-@import url(http://dl.dropbox.com/s/994s5szmyeye747/2084.css);
+@font-face {
+    font-family: '2084';
+    src: url('http://dl.dropbox.com/s/usgfqu8d02zw4z6/2084.otf');
+    src: url('http://dl.dropbox.com/s/usgfqu8d02zw4z6/2084.otf?#iefix') format('embedded-opentype'),
+         url('http://dl.dropbox.com/s/twmhhplm8shxdu5/2084.woff') format('woff'),
+         url('http://dl.dropbox.com/s/5vw3chrsn64q1jh/2084.ttf') format('truetype'),
+         url('http://dl.dropbox.com/s/enn9jn64mv3fnvo/2084.svg#2084') format('svg');
+    }
  
  /* Redux */
         body 
@@ -222,7 +232,7 @@ Based on Redux, originally created by http://jacob.tumblr.com-->
                 font-family: {font:Title};
                 text-shadow: 2px 3px 5px rgba(0,0,0, 0.5);
                 letter-spacing: -1px;
-            }
+                }
             
                 #wrapper #title a {
                     color: #fff;
@@ -230,7 +240,8 @@ Based on Redux, originally created by http://jacob.tumblr.com-->
                 }
             
             #wrapper #content {
-                width: {text:Content Width};
+   {block:IfNoSidebar}width: {text:Wrapper Width}{/block:IfNoSidebar}
+   {block:IfNotNoSidebar}width: {text:Content Width};{/block:IfNotNoSidebar}
                 
 				float: {block:IfSidebarOnLeft}right{/block:IfSidebarOnLeft}{block:IfNotSidebarOnLeft}left{/block:IfNotSidebarOnLeft};
             }
@@ -967,10 +978,41 @@ color: {color:Link};
                             margin-left: 15px;
                         }
 
+
 #title img{
 max-width: {text:Wrapper Width} !important;
+margin-left:auto !important; 
+margin-right:auto !important;}
+#headerbox {
+margin: 0 auto !important;
 }
-
+#outerheaderbox {
+position:relative;
+left: -50%;
+float:right;
+margin: 0 0 10px 0;
+}
+#innerheaderbox {
+position:relative;
+left: 50%;
+float:left;
+}
+#headerlinks a.page{		
+    
+	font-family: {font:Sidebar};
+	font-size: 12px !important;
+	font_weight: normal !important;
+	border-radius: 3px 3px 3px 3px !important;
+    color: #FFFFFF !important;
+    display: inline-block !important;
+    margin: 0 5px 5px 0 !important;
+    padding: 4px 5px !important;
+    float: left;
+	}
+#sidebarhtml {
+margin: 0 0 10px 0;
+}
+ 
 #customhtml {
                     display:none;
                     font-family: {font:Post Body} !important;
@@ -1149,12 +1191,33 @@ float: left;
 
 
    <div id="wrapper">
-        <center><div id="title">
-            <a href="/">
-                {block:IfHeaderImage}<img src="{image:Header}" />{/block:IfHeaderImage}
+        <div id="title">
+            <center><a href="/">
+                {block:IfHeaderImage}<img src="{image:Header}" center />{/block:IfHeaderImage}
                 {block:IfNotHeaderImage}{Title}{/block:IfNotHeaderImage}
-            </a>
-        </div></center>
+            </a></center></div>
+			
+<div>{block:IfShowLinksInHeader}<div id="outerheaderbox"><div id="innerheaderbox"><div id="headerlinks">
+<div id="pages" class="ask_and_submit">
+{block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
+{block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
+{block:HasPages}{block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}<div class="clear"></div>
+{/block:HasPages}
+</div></div></div></div><br><br>{/block:IfShowLinksInHeader}</div>
+			
+<div>{block:IfHeaderHTML} <div id="index"
+    {block:SearchPage}style="display: none;"{/block:SearchPage}
+    {block:TagPage}style="display: none;"{/block:TagPage}>
+    
+
+            <div class="page{CurrentPage}">
+  <div id="customhtml">
+               {text:Header Html}    
+            </div></div>
+        
+		
+  </div>
+{/block:IfHeaderHTML}</div>       
         
         <div id="content">
            
@@ -1392,15 +1455,20 @@ float: left;
             
         </div>
         
-        <div id="sidebar">
+ {block:IfNotNoSidebar}
+ <div id="sidebar">
             
 			<div id="top">
                 {block:IfAvatarImage}
 				<div id="avatar"><a href="/"><img src="{image:Avatar}" width="100%" /></a></div>
 				{/block:IfAvatarImage}
-                <div id="description">{Description}</div>
+                	{block:IfSidebarHTML} <div id="sidebarhtml">
+               {text:Sidebar Html}    
+            </div>
+  {/block:IfSidebarHTML}
+  <div id="description">{Description}</div>
                 
-                <div id="pages" class="ask_and_submit">
+                {block:IfNotShowLinksInHeader}<div id="pages" class="ask_and_submit">
                     {block:AskEnabled}<a href="/ask" class="page">{AskLabel}</a>{/block:AskEnabled}
                     {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
                     {block:HasPages}
@@ -1409,7 +1477,7 @@ float: left;
                         <div class="clear"></div>
                     
                 {/block:HasPages}
-                </div>
+                </div>{/block:IfNotShowLinksInHeader}
                 
                 <div id="buttons">
                     <div class="row">
@@ -1487,7 +1555,7 @@ float: left;
           
         
         <div class="clear"></div>
-    </div>
+    </div>{/block:IfNotNoSidebar}
     
     {block:Twitter}
         <script type="text/javascript" src="/tweets.js"></script>
